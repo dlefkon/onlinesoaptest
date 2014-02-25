@@ -1,0 +1,7 @@
+parameters:
+#    onlinesoaptest.example.class: Websites\OnlinesoaptestBundle\Example
+
+services:
+#    onlinesoaptest.example:
+#        class: %onlinesoaptest.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

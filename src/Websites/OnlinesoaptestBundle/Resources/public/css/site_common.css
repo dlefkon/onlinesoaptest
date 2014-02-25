@@ -1,0 +1,69 @@
+
+.sticky_note{ 
+	border:5px solid #FFD; 
+	width:800px; 
+	font-size:bigger; 
+	float:left;
+	background-color:#EEC;
+	border-radius:15px;
+	box-shadow: 2px 2px 5px #bbb;
+	text-align:left;
+	line-height:50px;
+	text-indent:none;
+	margin: 10px 0 25px 60px;
+}
+
+.selected {
+	font-size:11px;
+}
+
+#logo_img {
+    height: 200px;
+    margin: -40px 0 -20px -6px;
+}
+
+#submit {
+	cursor:pointer;
+}
+
+table.response{
+	font-family: arial;
+	margin: 0 auto;
+    width:auto;
+}
+
+table.response td {
+	padding: 0 20px;
+}
+
+.alternating_row_class_1, .alternating_row_class_2 {
+	padding-left:20px;
+	border:1px solid #999;
+}
+
+.required {
+	color:inherit;
+}
+
+a {
+	border-bottom:none;
+	padding: 10px;
+    vertical-align: sub;
+}
+
+.frame_mid {
+    background-color: #FFFFEF;
+}
+
+#response {
+	background: none repeat scroll 0 0 captiontext;
+    color: wheat;
+    margin: 0;
+    padding: 20px;
+    white-space: nowrap;
+    width: auto;
+}
+
+button {
+	cursor:pointer;
+}

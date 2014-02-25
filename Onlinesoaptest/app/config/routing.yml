@@ -1,0 +1,3 @@
+onlinesoaptest:
+    resource: "@OnlinesoaptestBundle/Resources/config/routing.yml"
+    prefix:   /

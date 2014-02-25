@@ -1,0 +1,3 @@
+lampquiz_homepage:
+    pattern:  /term/{term}
+    defaults: { _controller: LampquizBundle:Default:index }

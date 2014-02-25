@@ -1,0 +1,3 @@
+onlinesoaptest_home_page:
+    pattern: '/'
+    defaults: { _controller: OnlinesoaptestBundle:default:index, 'name' : 'onlinesoaptest' }

@@ -1,0 +1,7 @@
+parameters:
+#    applepies.example.class: Websites\ApplepiesBundle\Example
+
+services:
+#    applepies.example:
+#        class: %applepies.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

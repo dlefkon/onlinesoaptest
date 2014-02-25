@@ -1,0 +1,3 @@
+applepies_homepage:
+    pattern:  /pies/{name}
+    defaults: { _controller: ApplepiesBundle:Default:index }
