@@ -18,7 +18,7 @@
 	            		<span class="icon-bar"></span>
 	            		<span class="icon-bar"></span>
 	          		</a>
-					<a class="brand" href="#"><i class="ico-thin-right-arrow ico-color circle"></i> Magnu<span>s</span>.</a>
+					<a class="brand" href="#"><i class="ico-thin-right-arrow ico-color circle"></i> Online<span>Soap</span>Test.</a>
 	          		<div class="nav-collapse collapse">
 	            		<ul class="nav">
 							<li class="active"><a href="index.html">Home</a></li>
@@ -56,43 +56,6 @@
 	</header>
 	<!--end: Header-->
 	
-	<!-- start: Slider -->
-	<div class="slider-wrapper">
-
-		<div id="da-slider" class="da-slider">
-			<div class="da-slide">
-				<h2>Modern & Clean</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
-				<div class="da-img"><img src="{{ asset('bundles/Onlinesoaptest/images/parallax-slider/women1.png') }}" alt="image01" /></div>
-			</div>
-			<div class="da-slide">
-				<h2>Responsive Design</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
-				<div class="da-img"><img src="{{ asset('bundles/Onlinesoaptest/images/parallax-slider/responsive.png') }}" alt="image02" /></div>
-			</div>
-			<div class="da-slide">
-				<h2>1000 satisfied customers</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
-				<div class="da-img"><img src="{{ asset('bundles/Onlinesoaptest/images/parallax-slider/women2.png') }}" alt="image03" /></div>
-			</div>
-			<div class="da-slide">
-				<h2>HTML5</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
-				<div class="da-img"><img src="{{ asset('bundles/Onlinesoaptest/images/parallax-slider/html5.png') }}" alt="image04" /></div>
-			</div>
-			<nav class="da-arrows">
-				<span class="da-arrows-prev"></span>
-				<span class="da-arrows-next"></span>
-			</nav>
-		</div>
-		
-	</div>
-	<!-- end: Slider -->
-			
 	<!--start: Wrapper-->
 	<div id="wrapper">
 				
@@ -107,7 +70,12 @@
 					
 					<table>
 					
-					
+						<tr>
+							
+							<td><label for="demo">Demo:</label></td>
+							<td><input id="demo" name="demo" type="checkbox" class="big_checkbox"/></td>
+							
+						</tr>
 					
 						<tr>
 							<td>
@@ -167,8 +135,8 @@
 							<td><label for="version">Soap Version:</label>
 							</td>
 							<td><select id="version" name="version"/>
-									<option value="<?php echo SOAP_1_1 ?>">SOAP_1_1</option>
-									<option value="<?php echo SOAP_1_2 ?>"  selected="selected">SOAP_1_2</option>
+									<option value="{{ SOAP_1_1 }}">SOAP_1_1</option>
+									<option value="{{ SOAP_1_2 }}" selected="selected">SOAP_1_2</option>
 								</select>
 							</td>
 						</tr>
@@ -181,8 +149,8 @@
 							<td><label for="style">Soap Style:</label>
 							</td>
 							<td><select id="style" name="style"/>
-									<option value="<?php echo SOAP_RPC ?>" selected="selected">SOAP_RPC</option>
-									<option value="<?php echo SOAP_DOCUMENT ?>">SOAP_DOCUMENT</option>
+									<option value="{{ SOAP_RPC }}" selected="selected">SOAP_RPC</option>
+									<option value="{{ SOAP_DOCUMENT }}">SOAP_DOCUMENT</option>
 								</select>
 							</td>
 						</tr>
@@ -196,17 +164,15 @@
 							</td>
 							<td>
 								<select id="encoding" name="encoding"/>
-									<option value="<?php echo SOAP_ENCODED ?>">SOAP_ENCODED</option>
-									<option value="<?php echo SOAP_LITERAL ?>" selected="selected">SOAP_LITERAL</option>
+									<option value="{{ SOAP_ENCODED }}">SOAP_ENCODED</option>
+									<option value="{{ SOAP_LITERAL }}" selected="selected">SOAP_LITERAL</option>
 								</select>
 							</td>
 						</tr>
 						
 						
 						<tr>
-							<td><label for="demo">Demo:</label>
-								<input id="demo" name="demo" type="checkbox" class="big_checkbox" />
-							</td>
+							<td></td>
 							<td>
 								<input id="submit" type="button" value="Submit" />
 							</td>
@@ -354,7 +320,7 @@
 				<!-- start: Footer Menu Logo -->
 				<div class="span2">
 					<div id="footer-menu-logo">
-						<a class="brand" href="#">Magnu<span>s</span>.</a>
+						<a class="brand" href="#">Online<span>Soap</span>Test.</a>
 					</div>
 				</div>
 				<!-- end: Footer Menu Logo -->
@@ -433,26 +399,23 @@
 <script src="{{ asset('bundles/Onlinesoaptest/js/fancybox.js') }}></script>
 <script src="{{ asset('bundles/Onlinesoaptest/js/twitter.js') }}></script>
 <script defer="defer" src="{{ asset('bundles/Onlinesoaptest/js/custom.js') }}></script>
-<!-- end: Java Script -->
+
+<script src="{{ asset('bundles/Onlinesoaptest/js/app.js') }}"></script>
+    
+<script> 	
+     	
 var original_param = '';
 var new_param = '';
 
 function getOperations() {
 	$('#response').html('');
-	var ajax_url = 'http://<?php echo HTTP_HOST ?>/ajax/<?php echo DOMAIN_NAME ?>/index.php';
+	var ajax_url = 'http://{{ HTTP_HOST }}/ajax/{{ DOMAIN_NAME }}/index.php';
 	$.ajax({
 		data : {'wsdl':$('#wsdl').val(),
 				'endpoint':$('#endpoint').val(),
 				'version':$('#version').val(),
 				'style':$('#style').val(),
 				'encoding':$('#encoding').val(),
-				
-			<?php for($i=0; $i<20; $i++){ ?>
-			'parameter_name_pnv_<?php echo $i ?>':$('#parameter_name_pnv_<?php echo $i ?>').val(),
-			'parameter_value_pnv_<?php echo $i ?>':$('#parameter_value_pnv_<?php echo $i ?>').val(),
-			
-			<?php } ?>
-			
 				'operation':$('#operation').val()
 		},	
 		url : ajax_url,
@@ -536,13 +499,13 @@ $(document).ready(function() {
 			$('#parameter_value_pnv_5').val('AKIAJCFVRHOEH6XA3IYA').parent('li').show();
 			
 			version = $('#version').val();
-			$('#version').val(<?php echo SOAP_1_2 ?>);
+			$('#version').val({{ SOAP_1_2 }});
 			
 			style = $('#style').val();
-			$('#style').val(<?php echo SOAP_RPC ?>);
+			$('#style').val( {{ SOAP_RPC }});
 			
 			encoding = $('#encoding').val();
-			$('#encoding').val(<?php echo SOAP_LITERAL ?>);
+			$('#encoding').val({{ SOAP_LITERAL }});
 			
 		} else {
 	
@@ -550,16 +513,26 @@ $(document).ready(function() {
 			$('#endpoint').val(endpoint);
 			$('#operation').val(operation);
 			
-			<?php for($i=0; $i<20; $i++){?>
-			$('#parameter_name_pnv_<?php echo $i ?>').val(parameter_name_pnv_<?php echo $i ?>);
-			$('#parameter_value_pnv_<?php echo $i ?>').val(parameter_value_pnv_<?php echo $i ?>);
-			<?php } ?>
+			{% for i in 0..20 %}
+   
+				$('#parameter_name_pnv_{{ i }}').val(parameter_name_pnv_{{ i }});
+				$('#parameter_value_pnv_{{ i }}').val(parameter_value_pnv_{{ i }});
+				
+			{% endfor %}
+			
 			$('#version').val(version);
 			$('#style').val(style);
 			$('#encoding').val(encoding);
 		}
 	});
+	
+	$('#demo').prop('checked', false);
 });
+
+</script>
+<!-- end: Java Script -->
+
+
 </body> 
 
 {% endblock body %}
