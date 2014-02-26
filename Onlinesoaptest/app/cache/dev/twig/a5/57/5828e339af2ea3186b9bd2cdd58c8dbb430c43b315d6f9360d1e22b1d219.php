@@ -11,6 +11,9 @@ class __TwigTemplate_a5575828e339af2ea3186b9bd2cdd58c8dbb430c43b315d6f9360d1e22b
 
         $this->blocks = array(
             'body' => array($this, 'block_body'),
+            'header' => array($this, 'block_header'),
+            'content' => array($this, 'block_content'),
+            'footer' => array($this, 'block_footer'),
         );
     }
 
@@ -30,59 +33,12 @@ class __TwigTemplate_a5575828e339af2ea3186b9bd2cdd58c8dbb430c43b315d6f9360d1e22b
         // line 4
         echo "
 <body>
-\t
-\t<!--start: Header -->
-\t<header>
-\t\t
-\t\t<!--start: Container -->
-\t\t<div class=\"container\">
-\t\t\t
-\t\t\t<!--start: Navigation -->
-\t\t\t<div class=\"navbar navbar-inverse\">
-\t    \t\t<div class=\"navbar-inner\">
-\t          \t\t<a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
-\t            \t\t<span class=\"icon-bar\"></span>
-\t            \t\t<span class=\"icon-bar\"></span>
-\t            \t\t<span class=\"icon-bar\"></span>
-\t          \t\t</a>
-\t\t\t\t\t<a class=\"brand\" href=\"#\"><i class=\"ico-thin-right-arrow ico-color circle\"></i> Online<span>Soap</span>Test.</a>
-\t          \t\t<div class=\"nav-collapse collapse\">
-\t            \t\t<ul class=\"nav\">
-\t\t\t\t\t\t\t<li class=\"active\"><a href=\"index.html\">Home</a></li>
-\t              \t\t\t<li><a href=\"about.html\">About</a></li>
-\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t                \t\t\t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Features<b class=\"caret\"></b></a>
-\t                \t\t\t<ul class=\"dropdown-menu\">
-\t                  \t\t\t\t<li><a href=\"social-icons.html\">Social Icons</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"icons.html\">Icons</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"typography.html\">Typography</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"shortcodes.html\">Shortcodes</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"list-styles.html\">List Styles</a></li>
-\t                \t\t\t</ul>
-\t              \t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t                \t\t\t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Portfolio<b class=\"caret\"></b></a>
-\t                \t\t\t<ul class=\"dropdown-menu\">
-\t                  \t\t\t\t<li><a href=\"portfolio3.html\">3 Columns</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"portfolio4.html\">4 Columns</a></li>
-\t                \t\t\t</ul>
-\t              \t\t\t</li>\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<li><a href=\"services.html\">Services</a></li>
-\t\t\t\t\t\t\t<li><a href=\"pricing.html\">Pricing</a></li>
-\t\t\t\t\t\t\t<li><a href=\"blog.html\">Blog</a></li>
-\t              \t\t\t<li><a href=\"contact.html\">Contact</a></li>
-\t            \t\t</ul>
-\t          \t\t</div>
-\t        \t</div>
-\t      \t</div>\t
-\t\t\t<!--end: Navigation -->
-\t\t\t\t\t\t\t\t\t\t\t
-\t\t</div>
-\t\t<!--end: Container-->\t\t\t
-\t\t\t
-\t</header>
-\t<!--end: Header-->
-\t
+
+\t";
+        // line 7
+        $this->displayBlock('header', $context, $blocks);
+        // line 8
+        echo "\t
 \t<!--start: Wrapper-->
 \t<div id=\"wrapper\">
 \t\t\t\t
@@ -90,148 +46,12 @@ class __TwigTemplate_a5575828e339af2ea3186b9bd2cdd58c8dbb430c43b315d6f9360d1e22b
     \t<div class=\"container\">
 \t\t\t
 \t\t\t<hr>
-\t\t\t
-\t\t\t<div class=\"sticky_note\">
-\t\t\t
-\t\t\t\t<form>
-\t\t\t\t\t
-\t\t\t\t\t<table>
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<td><label for=\"demo\">Demo:</label></td>
-\t\t\t\t\t\t\t<td><input id=\"demo\" name=\"demo\" type=\"checkbox\" class=\"big_checkbox\"/></td>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<label for=\"wsdl\">WSDL URL:</label>
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td><input id=\"wsdl\" name=\"wsdl\" type=\"text\" size=\"50\" />
-\t\t\t\t\t\t\t\t<button onclick=\"var url = \$('#wsdl').val(); window.open(url,'','width=900,height=300,scrollbars=yes,left=100,top=100');\">View</button>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><label for=\"endpoint\">Endpoint:</label>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td><input id=\"endpoint\" name=\"endpoint\" type=\"text\" size=\"50\" />
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><label for=\"operation\">Operation:</label>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td><input id=\"operation\" name=\"operation\" type=\"text\" size=\"50\"  class=\"required\" />
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr id='parameters'>
-\t\t\t\t\t\t    <td><label class=\"ap\">Add Parameter</label></td>
-\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t<table>
-\t\t\t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t\t\t<label>Name:</label>
-\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
-\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t\t\t<label>Value:</label>
-\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
-\t\t\t\t\t\t\t\t\t\t\t<a class='add_param' href='javascript:void(0);'>+</a>
-\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t</tr>\t
-\t\t\t\t\t\t\t\t</table>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><label for=\"version\">Soap Version:</label>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td><select id=\"version\" name=\"version\"/>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 138
-        echo twig_escape_filter($this->env, (isset($context["SOAP_1_1"]) ? $context["SOAP_1_1"] : $this->getContext($context, "SOAP_1_1")), "html", null, true);
-        echo "\">SOAP_1_1</option>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 139
-        echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
-        echo "\" selected=\"selected\">SOAP_1_2</option>
-\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><label for=\"style\">Soap Style:</label>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td><select id=\"style\" name=\"style\"/>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 152
-        echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
-        echo "\" selected=\"selected\">SOAP_RPC</option>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 153
-        echo twig_escape_filter($this->env, (isset($context["SOAP_DOCUMENT"]) ? $context["SOAP_DOCUMENT"] : $this->getContext($context, "SOAP_DOCUMENT")), "html", null, true);
-        echo "\">SOAP_DOCUMENT</option>
-\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><label for=\"encoding\">Soap Encoding Method:</label>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t<select id=\"encoding\" name=\"encoding\"/>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 167
-        echo twig_escape_filter($this->env, (isset($context["SOAP_ENCODED"]) ? $context["SOAP_ENCODED"] : $this->getContext($context, "SOAP_ENCODED")), "html", null, true);
-        echo "\">SOAP_ENCODED</option>
-\t\t\t\t\t\t\t\t\t<option value=\"";
-        // line 168
-        echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
-        echo "\" selected=\"selected\">SOAP_LITERAL</option>
-\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td></td>
-\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t<input id=\"submit\" type=\"button\" value=\"Submit\" />
-\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t
-\t\t\t\t\t</table>
-\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t</form>
-\t\t\t\t\t\t
-\t\t\t<div id=\"response\" class=\"sticky_note\" style=\"display:none;\"></div>
-\t\t\t</div>
-\t\t\t
+\t\t\t\t
+\t\t\t";
+        // line 17
+        $this->displayBlock('content', $context, $blocks);
+        // line 145
+        echo "\t\t\t
 \t\t\t<hr>
 \t\t\t
 \t\t</div>
@@ -240,249 +60,64 @@ class __TwigTemplate_a5575828e339af2ea3186b9bd2cdd58c8dbb430c43b315d6f9360d1e22b
 \t</div>
 \t<!-- end: Wrapper  -->\t\t\t
 
-\t<!-- start: Footer -->
-\t<div id=\"footer\">
-\t\t
-\t\t<!-- start: Container -->
-\t\t<div class=\"container\">
-\t\t\t
-\t\t\t<!-- start: Row -->
-\t\t\t<div class=\"row\">
 
-\t\t\t\t<!-- start: About -->
-\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t
-\t\t\t\t\t<h3>creativeLabs</h3>
-
-\t\t\t\t\t<p>
-\t\t\t\t\t\t<i class=\"mini-ico-map-marker mini-white\"></i> 30 South Park Avenue
-\t\t\t\t\t</p>
-\t\t\t\t\t<p>\t
-\t\t\t\t\t\t<i class=\"mini-ico-map-marker mini-white\"></i> San Francisco, CA 94108, USA
-\t\t\t\t\t</p>\t
-\t\t\t\t\t<p>\t
-\t\t\t\t\t\t<i class=\"ico-z-iphone\"></i> Phone: (123) 456-7890
-\t\t\t\t\t</p>
-\t\t\t\t\t<p>\t
-\t\t\t\t\t\t<i class=\"mini-ico-print mini-white\"></i> Fax: +08 (123) 456-7890
-\t\t\t\t\t</p>
-\t\t\t\t\t<p>
-\t\t\t\t\t\t<i class=\"mini-ico-envelope mini-white\"></i> Email: contact@companyname.com
-\t\t\t\t\t</p>
-\t\t\t\t\t<p>
-\t\t\t\t\t\t<i class=\"mini-ico-globe mini-white\"></i> Web: companyname.com
-\t\t\t\t\t</p>
-\t\t\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: About -->
-
-\t\t\t\t<!-- start: Latest Tweets -->
-\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t
-\t\t\t\t\t<h3>Latest Tweets</h3>
-\t\t\t\t\t
-\t\t\t\t\t<ul id=\"twitter\">
-\t\t\t\t\t\t
-\t\t\t\t\t</ul>
-
-\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Latest Tweets -->
-
-\t\t\t\t<!-- start: Photo Stream -->
-\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t
-\t\t\t\t\t<h3>Flickr Photo Stream</h3>
-\t\t\t\t\t<div class=\"flickr-widget\">
-\t\t\t\t\t\t<script type=\"text/javascript\" src=\"http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08\"></script>
-\t\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t</div>
-\t\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Photo Stream -->
-\t\t\t\t
-\t\t\t\t<!-- start: Follow Us -->
-\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t
-\t\t\t\t\t<h3>Follow Us</h3>
-\t\t\t\t\t
-\t\t\t\t\t<div id=\"social-r\" class=\"tooltips\">
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Amazon\" class=\"amazon\">Amazon</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Behance\" class=\"behance\">Behance</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Blogger\" class=\"blogger\">Blogger</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"DeviantART\" class=\"deviantart\">DeviantART</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Dribbble\" class=\"dribbble\">Dribbble</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Dropbox\" class=\"dropbox\">Dropbox</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Evernote\" class=\"evernote\">Evernote</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Facebook\" class=\"facebook\">Facebook</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Forrst\" class=\"forrst\">Forrst</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Github\" class=\"github\">Github</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Google Plus\" class=\"googleplus\">Google Plus</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Joli Cloud\" class=\"jolicloud\">Joli Cloud</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Last FM\" class=\"last-fm\">Last FM</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"LinkedIn\" class=\"linkedin\">LinkedIn</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Picasa\" class=\"picasa\">Picasa</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Pintrest\" class=\"pintrest\">Pintrest</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"RSS\" class=\"rss\">RSS</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Skype\" class=\"skype\">Skype</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Spotify\" class=\"spotify\">Spotify</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"StumpleUpon\" class=\"stumbleupon\">StumbleUpon</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Tumblr\" class=\"tumblr\">Tumblr</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Twitter\" class=\"twitter\">Twitter</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Vimeo\" class=\"vimeo\">Vimeo</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"WordPress\" class=\"wordpress\">WordPress</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Xing\" class=\"xing\">Xing</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Yahoo\" class=\"yahoo\">Yahoo</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"YouTube\" class=\"youtube\">YouTube</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Soundcloud\" class=\"soundcloud\">Soundcloud</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"myspace\" class=\"myspace\">myspace</a>
-\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"vkontakte\" class=\"vkontakte\">vkontakte</a>
-\t\t\t\t\t</div>
-\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Follow Us -->
-\t\t\t\t
-\t\t\t</div>
-\t\t\t<!-- end: Row -->\t
-\t\t\t
-\t\t</div>
-\t\t<!-- end: Container  -->
-
-\t</div>
-\t<!-- end: Footer -->
-\t
-\t<!-- start: Footer Menu -->
-\t<div id=\"footer-menu\" class=\"hidden-tablet hidden-phone\">
-
-\t\t<!-- start: Container -->
-\t\t<div class=\"container\">
-\t\t\t
-\t\t\t<!-- start: Row -->
-\t\t\t<div class=\"row\">
-
-\t\t\t\t<!-- start: Footer Menu Logo -->
-\t\t\t\t<div class=\"span2\">
-\t\t\t\t\t<div id=\"footer-menu-logo\">
-\t\t\t\t\t\t<a class=\"brand\" href=\"#\">Online<span>Soap</span>Test.</a>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Footer Menu Logo -->
-
-\t\t\t\t<!-- start: Footer Menu Links-->
-\t\t\t\t<div class=\"span9\">
-\t\t\t\t\t
-\t\t\t\t\t<div id=\"footer-menu-links\">
-
-\t\t\t\t\t\t<ul id=\"footer-nav\">
-
-\t\t\t\t\t\t\t<li><a href=\"index.html\">Start</a></li>
-
-\t\t\t\t\t\t\t<li><a href=\"about.html\">About</a></li>
-
-\t\t\t\t\t\t\t<li><a href=\"services.html\">Services</a></li>
-
-\t\t\t\t\t\t\t<li><a href=\"pricing.html\">Pricing</a></li>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>
-
-\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t</div>
-\t\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Footer Menu Links-->
-
-\t\t\t\t<!-- start: Footer Menu Back To Top -->
-\t\t\t\t<div class=\"span1\">
-\t\t\t\t\t\t
-\t\t\t\t\t<div id=\"footer-menu-back-to-top\">
-\t\t\t\t\t\t<a href=\"#\"></a>
-\t\t\t\t\t</div>
-\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Footer Menu Back To Top -->
-\t\t\t
-\t\t\t</div>
-\t\t\t<!-- end: Row -->
-\t\t\t
-\t\t</div>
-\t\t<!-- end: Container  -->\t
-
-\t</div>\t
-\t<!-- end: Footer Menu -->
-
-\t<!-- start: Copyright -->
-\t<div id=\"copyright\">
-\t
-\t\t<!-- start: Container -->
-\t\t<div class=\"container\">
-\t\t
-\t\t\t<div class=\"sixteen columns\">
-\t\t\t\t<p>
-\t\t\t\t\t&copy; 2012, <a href=\"http://clabs.co\">creativeLabs</a>. Designed by <a href=\"http://clabs.co\">creativeLabs</a> in Poland <img src=\"";
-        // line 379
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
-        echo "\" alt=\"Poland\" style=\"margin-top:-4px\">
-\t\t\t\t</p>
-\t\t\t</div>
-\t
-\t\t</div>
-\t\t<!-- end: Container  -->
-\t\t
-\t</div>\t
-\t<!-- end: Copyright -->
-
-<!-- start: Java Script -->
+";
+        // line 155
+        $this->displayBlock('footer', $context, $blocks);
+        // line 156
+        echo "<!-- start: Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"";
-        // line 391
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery-1.8.2.js"), "html", null, true);
+        // line 158
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 392
+        // line 159
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/isotope.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 393
+        // line 160
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.imagesloaded.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 394
+        // line 161
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/bootstrap.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 395
+        // line 162
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/flexslider.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 396
+        // line 163
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/carousel.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 397
+        // line 164
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.cslider.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 398
+        // line 165
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/slider.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 399
+        // line 166
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/fancybox.js"), "html", null, true);
         echo "></script>
 <script src=\"";
-        // line 400
+        // line 167
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/twitter.js"), "html", null, true);
         echo "></script>
+<script src=\"";
+        // line 168
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/modernizr.js"), "html", null, true);
+        echo "></script>
 <script defer=\"defer\" src=\"";
-        // line 401
+        // line 169
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/custom.js"), "html", null, true);
         echo "></script>
 
 <script src=\"";
-        // line 403
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/app.js"), "html", null, true);
         echo "\"></script>
     
@@ -494,7 +129,7 @@ var new_param = '';
 function getOperations() {
 \t\$('#response').html('');
 \tvar ajax_url = 'http://";
-        // line 412
+        // line 180
         echo twig_escape_filter($this->env, (isset($context["HTTP_HOST"]) ? $context["HTTP_HOST"] : $this->getContext($context, "HTTP_HOST")), "html", null, true);
         echo "/ajax/";
         echo twig_escape_filter($this->env, (isset($context["DOMAIN_NAME"]) ? $context["DOMAIN_NAME"] : $this->getContext($context, "DOMAIN_NAME")), "html", null, true);
@@ -530,14 +165,14 @@ function createNewParam(){
 
 \$(document).ready(function() {
 
-\t\$('.add_param').live('click', function(){
+\t\$('.add_param').on('click', function(){
 \t\tcreateNewParam();
 \t});
 
 \t\$('#demo').click(function(){
-\t\t\t
-\t\tif(\$(this).attr('checked') == 'checked'){
-\t\t\t
+
+\t\tif(\$(this).prop('checked') === true ){
+
 \t\t\twsdl = \$('#wsdl').val();
 \t\t\t\$('#wsdl').val('http://soap.amazon.com/schemas2/AmazonWebServices.wsdl');
 \t
@@ -589,19 +224,19 @@ function createNewParam(){
 \t\t\t
 \t\t\tversion = \$('#version').val();
 \t\t\t\$('#version').val(";
-        // line 502
+        // line 270
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tstyle = \$('#style').val();
 \t\t\t\$('#style').val( ";
-        // line 505
+        // line 273
         echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tencoding = \$('#encoding').val();
 \t\t\t\$('#encoding').val(";
-        // line 508
+        // line 276
         echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
         echo ");
 \t\t\t
@@ -612,31 +247,40 @@ function createNewParam(){
 \t\t\t\$('#operation').val(operation);
 \t\t\t
 \t\t\t";
-        // line 516
+        // line 284
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable(range(0, 20));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 517
+            // line 285
             echo "   
-\t\t\t\t\$('#parameter_name_pnv_";
-            // line 518
-            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-            echo "').val(parameter_name_pnv_";
-            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-            echo ");
-\t\t\t\t\$('#parameter_value_pnv_";
-            // line 519
-            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-            echo "').val(parameter_value_pnv_";
-            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-            echo ");
+   \t\t\t\t";
+            // line 286
+            if ($this->getAttribute((isset($context["parameter_name_pnv_loop"]) ? $context["parameter_name_pnv_loop"] : null), "index", array(), "any", true, true)) {
+                // line 287
+                echo "   \t\t\t\t
+\t\t\t\t\t\$('#parameter_name_pnv_";
+                // line 288
+                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+                echo "').val(parameter_name_pnv_";
+                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+                echo ");
+\t\t\t\t\t\$('#parameter_value_pnv_";
+                // line 289
+                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+                echo "').val(parameter_value_pnv_";
+                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+                echo ");
 \t\t\t\t
+\t\t\t\t";
+            }
+            // line 292
+            echo "\t\t\t\t
 \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 522
+        // line 294
         echo "\t\t\t
 \t\t\t\$('#version').val(version);
 \t\t\t\$('#style').val(style);
@@ -656,6 +300,173 @@ function createNewParam(){
 ";
     }
 
+    // line 7
+    public function block_header($context, array $blocks = array())
+    {
+        echo " ";
+        $this->displayParentBlock("header", $context, $blocks);
+        echo " ";
+    }
+
+    // line 17
+    public function block_content($context, array $blocks = array())
+    {
+        echo " 
+\t\t\t
+\t\t\t\t<div class=\"sticky_note\">
+\t\t\t\t
+\t\t\t\t\t<form>
+\t\t\t\t\t\t
+\t\t\t\t\t\t<table>
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<td style=\"text-align:right;\"><label for=\"demo\" style=\" margin-right:10px;\">Demo:</label></td>
+\t\t\t\t\t\t\t\t<td><input id=\"demo\" name=\"demo\" type=\"checkbox\" class=\"big_checkbox\"/></td>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t<label for=\"wsdl\">WSDL URL:</label>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td><input id=\"wsdl\" name=\"wsdl\" type=\"text\" size=\"50\" />
+\t\t\t\t\t\t\t\t\t<button onclick=\"var url = \$('#wsdl').val(); window.open(url,'','width=900,height=300,scrollbars=yes,left=100,top=100');\">View</button>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td><label for=\"endpoint\">Endpoint:</label>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td><input id=\"endpoint\" name=\"endpoint\" type=\"text\" size=\"50\" />
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td><label for=\"operation\">Operation:</label>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td><input id=\"operation\" name=\"operation\" type=\"text\" size=\"50\"  class=\"required\" />
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr id='parameters'>
+\t\t\t\t\t\t\t    <td><label class=\"ap\">Add Parameter</label></td>
+\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t<table>
+\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t<label>Name:</label>
+\t\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t<label>Value:</label>
+\t\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
+\t\t\t\t\t\t\t\t\t\t\t\t<a class='add_param' href='javascript:void(0);'>+</a>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t</tr>\t
+\t\t\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td><label for=\"version\">Soap Version:</label>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td><select id=\"version\" name=\"version\"/>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 91
+        echo twig_escape_filter($this->env, (isset($context["SOAP_1_1"]) ? $context["SOAP_1_1"] : $this->getContext($context, "SOAP_1_1")), "html", null, true);
+        echo "\">SOAP_1_1</option>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 92
+        echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
+        echo "\" selected=\"selected\">SOAP_1_2</option>
+\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td><label for=\"style\">Soap Style:</label>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td><select id=\"style\" name=\"style\"/>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 105
+        echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
+        echo "\" selected=\"selected\">SOAP_RPC</option>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 106
+        echo twig_escape_filter($this->env, (isset($context["SOAP_DOCUMENT"]) ? $context["SOAP_DOCUMENT"] : $this->getContext($context, "SOAP_DOCUMENT")), "html", null, true);
+        echo "\">SOAP_DOCUMENT</option>
+\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td><label for=\"encoding\">Soap Encoding Method:</label>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t<select id=\"encoding\" name=\"encoding\"/>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 120
+        echo twig_escape_filter($this->env, (isset($context["SOAP_ENCODED"]) ? $context["SOAP_ENCODED"] : $this->getContext($context, "SOAP_ENCODED")), "html", null, true);
+        echo "\">SOAP_ENCODED</option>
+\t\t\t\t\t\t\t\t\t\t<option value=\"";
+        // line 121
+        echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
+        echo "\" selected=\"selected\">SOAP_LITERAL</option>
+\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td></td>
+\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t<input id=\"submit\" type=\"button\" value=\"Submit\" />
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t</table>
+\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t</form>
+\t\t\t\t\t\t\t
+\t\t\t\t<div id=\"response\" class=\"sticky_note\" style=\"display:none;\"></div>
+\t\t\t\t</div>
+\t\t\t
+\t\t\t
+\t\t\t";
+    }
+
+    // line 155
+    public function block_footer($context, array $blocks = array())
+    {
+        echo " ";
+        $this->displayParentBlock("footer", $context, $blocks);
+        echo " ";
+    }
+
     public function getTemplateName()
     {
         return "OnlinesoaptestBundle:Default:index.html.twig";
@@ -668,6 +479,6 @@ function createNewParam(){
 
     public function getDebugInfo()
     {
-        return array (  640 => 522,  629 => 519,  623 => 518,  620 => 517,  616 => 516,  605 => 508,  599 => 505,  593 => 502,  498 => 412,  486 => 403,  481 => 401,  477 => 400,  473 => 399,  469 => 398,  465 => 397,  461 => 396,  457 => 395,  453 => 394,  449 => 393,  445 => 392,  441 => 391,  426 => 379,  212 => 168,  208 => 167,  191 => 153,  187 => 152,  171 => 139,  167 => 138,  31 => 4,  28 => 3,);
+        return array (  463 => 155,  435 => 121,  431 => 120,  414 => 106,  410 => 105,  394 => 92,  390 => 91,  312 => 17,  304 => 7,  284 => 294,  277 => 292,  269 => 289,  263 => 288,  260 => 287,  258 => 286,  255 => 285,  251 => 284,  240 => 276,  234 => 273,  228 => 270,  133 => 180,  121 => 171,  116 => 169,  112 => 168,  108 => 167,  104 => 166,  100 => 165,  96 => 164,  92 => 163,  88 => 162,  84 => 161,  80 => 160,  76 => 159,  72 => 158,  68 => 156,  66 => 155,  54 => 145,  52 => 17,  41 => 8,  39 => 7,  34 => 4,  31 => 3,);
     }
 }

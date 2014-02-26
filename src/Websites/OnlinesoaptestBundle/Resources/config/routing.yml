@@ -1,3 +1,15 @@
 onlinesoaptest_home_page:
     pattern: '/'
-    defaults: { _controller: OnlinesoaptestBundle:default:index, 'name' : 'onlinesoaptest' }
+    defaults: { _controller: OnlinesoaptestBundle:default:home, 'title' : 'onlinesoaptest' }
+    
+onlinesoaptest_about_page:
+    pattern: '/about'
+    defaults: { _controller: OnlinesoaptestBundle:default:about, 'title' : 'onlinesoaptest::about' }
+    
+onlinesoaptest_blog_page:
+    pattern: '/blog'
+    defaults: { _controller: OnlinesoaptestBundle:default:blog, 'title' : 'onlinesoaptest::blog' }
+    
+onlinesoaptest_contact_page:
+    pattern: '/contact'
+    defaults: { _controller: OnlinesoaptestBundle:default:contact, 'title' : 'onlinesoaptest::contact' }

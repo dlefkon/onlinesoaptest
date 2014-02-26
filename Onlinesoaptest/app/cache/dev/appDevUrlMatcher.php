@@ -139,7 +139,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'onlinesoaptest_home_page');
             }
 
-            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::indexAction',  'name' => 'onlinesoaptest',  '_route' => 'onlinesoaptest_home_page',);
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::homeAction',  'title' => 'onlinesoaptest',  '_route' => 'onlinesoaptest_home_page',);
+        }
+
+        // onlinesoaptest_about_page
+        if ($pathinfo === '/about') {
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::aboutAction',  'title' => 'onlinesoaptest::about',  '_route' => 'onlinesoaptest_about_page',);
+        }
+
+        // onlinesoaptest_blog_page
+        if ($pathinfo === '/blog') {
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::blogAction',  'title' => 'onlinesoaptest::blog',  '_route' => 'onlinesoaptest_blog_page',);
+        }
+
+        // onlinesoaptest_contact_page
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::contactAction',  'title' => 'onlinesoaptest::contact',  '_route' => 'onlinesoaptest_contact_page',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
