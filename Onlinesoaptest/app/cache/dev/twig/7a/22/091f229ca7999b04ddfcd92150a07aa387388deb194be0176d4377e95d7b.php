@@ -240,10 +240,33 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t<!-- start: Photo Stream -->
 \t\t\t\t\t<div class=\"span3\">
 \t\t\t\t\t\t
-\t\t\t\t\t\t<h3>Flickr Photo Stream</h3>
+\t\t\t\t\t\t<h3>Photo Stream</h3>
+
 \t\t\t\t\t\t<div class=\"flickr-widget\">
-\t\t\t\t\t\t\t<script type=\"text/javascript\" src=\"http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08\"></script>
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
+\t\t\t\t\t\t\t\t<a href=\"http://itknowledgeexchange.techtarget.com/qa-processes/page/3/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Rusty\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/supersoap.jpg\">
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
+\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Boathouse Isle of Danna\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
+\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Boathouse Isle of Danna\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div id=\"flickr_badge_image4\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/12176303006/\"><img width=\"75\" height=\"75\" title=\"Dancin Dog\" alt=\"A photo on Flickr\" src=\"http://farm3.staticflickr.com/2888/12176303006_2d8f6e7924_s.jpg\"></a></div><div id=\"flickr_badge_image5\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8637527812/\"><img width=\"75\" height=\"75\" title=\"Beech Tree Strathmore\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8542/8637527812_326926a060_s.jpg\"></a></div><div id=\"flickr_badge_image6\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8627629925/\"><img width=\"75\" height=\"75\" title=\"Fowlis\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8521/8627629925_0781c1fc87_s.jpg\"></a></div><div id=\"flickr_badge_image7\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8207432285/\"><img width=\"75\" height=\"75\" title=\"Skotland\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8203/8207432285_b85b135b3e_s.jpg\"></a></div><div id=\"flickr_badge_image8\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8188704520/\"><img width=\"75\" height=\"75\" title=\"Elgol From Tokavaig\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8478/8188704520_8d7b0a9536_s.jpg\"></a></div><div id=\"flickr_badge_image9\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8182862834/\"><img width=\"75\" height=\"75\" title=\"Buachaille Etive Mhor\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8200/8182862834_45647ace5d_s.jpg\"></a></div><span class=\"flickr_badge_beacon\" style=\"position:absolute;left:-999em;top:-999em;visibility:hidden\"><img width=\"0\" height=\"0\" alt=\"\" src=\"http://geo.yahoo.com/p?s=792600102&amp;t=d4ae8115c12a6e4df3d002fa37e84a7f&amp;r=http%3A%2F%2Fonlinesoaptest%2F&amp;fl_ev=0&amp;lang=en&amp;intl=us\"></span>
 \t\t\t\t\t\t\t<div class=\"clear\"></div>
+\t\t\t\t\t\t\t
+
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
@@ -364,7 +387,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t<div class=\"sixteen columns\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\t&copy; 2012   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
-        // line 281
+        // line 304
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
         echo "\" alt=\"Poland\" style=\"margin-top:-4px\">
 \t\t\t\t\t</p>
@@ -391,6 +414,6 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
     public function getDebugInfo()
     {
-        return array (  368 => 281,  191 => 106,  188 => 105,  182 => 103,  125 => 48,  122 => 47,  118 => 105,  115 => 104,  113 => 103,  110 => 102,  108 => 47,  105 => 46,  102 => 45,  92 => 22,  88 => 21,  83 => 20,  80 => 19,  69 => 37,  61 => 32,  55 => 28,  53 => 19,  36 => 4,  33 => 3,);
+        return array (  391 => 304,  191 => 106,  188 => 105,  182 => 103,  125 => 48,  122 => 47,  118 => 105,  115 => 104,  113 => 103,  110 => 102,  108 => 47,  105 => 46,  102 => 45,  92 => 22,  88 => 21,  83 => 20,  80 => 19,  69 => 37,  61 => 32,  55 => 28,  53 => 19,  36 => 4,  33 => 3,);
     }
 }
