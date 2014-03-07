@@ -16,6 +16,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
             'header' => array($this, 'block_header'),
             'content' => array($this, 'block_content'),
             'footer' => array($this, 'block_footer'),
+            'js' => array($this, 'block_js'),
         );
     }
 
@@ -69,7 +70,11 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/css/ie9.css"), "html", null, true);
         echo " rel=\"stylesheet\">
     <![endif]-->
-
+     \t
+\t<script src=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.js"), "html", null, true);
+        echo "\"></script>
      \t
 </head>
 
@@ -98,30 +103,50 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
     ";
     }
 
-    // line 45
+    // line 46
     public function block_body($context, array $blocks = array())
     {
-        // line 46
+        // line 47
         echo "
 \t";
-        // line 47
+        // line 48
         $this->displayBlock('header', $context, $blocks);
-        // line 102
-        echo "\t
-\t";
         // line 103
-        $this->displayBlock('content', $context, $blocks);
-        // line 104
         echo "\t
+\t<!--start: Wrapper-->
+\t<div id=\"wrapper\">
+\t\t\t\t
+\t\t<!--start: Container -->
+    \t<div class=\"container\">
+\t\t\t
+\t\t\t<hr>
+\t\t\t\t
+\t\t\t\t";
+        // line 112
+        $this->displayBlock('content', $context, $blocks);
+        // line 113
+        echo "\t
+\t\t\t<hr>
+\t\t\t
+\t\t</div>
+\t\t<!--end: Container-->
+\t
+\t</div>
+\t<!-- end: Wrapper  -->\t\t\t
+
+<!--\t
 \t";
-        // line 105
+        // line 123
         $this->displayBlock('footer', $context, $blocks);
+        // line 354
+        echo "\t
+";
     }
 
-    // line 47
+    // line 48
     public function block_header($context, array $blocks = array())
     {
-        // line 48
+        // line 49
         echo "
 \t\t<!--start: Header -->
 \t\t<header>
@@ -137,7 +162,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t            \t\t<span class=\"icon-bar\"></span>
 \t\t            \t\t<span class=\"icon-bar\"></span>
 \t\t          \t\t</a>
-\t\t\t\t\t\t<a class=\"brand\" href=\"#\"><i class=\"ico-thin-right-arrow ico-color circle\"></i> Online<span>Soap</span>Test.</a>
+\t\t\t\t\t\t<a class=\"brand\" href=\"/\"><i class=\"ico-thin-right-arrow ico-color circle\"></i> Online<span>Soap</span>Test.</a>
 \t\t          \t\t<div class=\"nav-collapse collapse\">
 \t\t            \t\t<ul class=\"nav\">
 \t\t\t\t\t\t\t\t<li class=\"active\"><a href=\"/\">Home</a></li>
@@ -161,7 +186,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t              \t\t\t</li>\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<li><a href=\"services\">Services</a></li>
 \t\t\t\t\t\t\t\t<li><a href=\"pricing\">Pricing</a></li> -->
-\t\t\t\t\t\t\t\t<li><a href=\"blog\">Blog</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"/blog\">Blog</a></li>
 \t\t              \t\t\t<li><a href=\"contact\">Contact</a></li>
 \t\t            \t\t</ul>
 \t\t          \t\t</div>
@@ -178,16 +203,16 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t";
     }
 
-    // line 103
+    // line 112
     public function block_content($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 105
+    // line 123
     public function block_footer($context, array $blocks = array())
     {
-        // line 106
+        // line 124
         echo "\t
 \t\t<!-- start: Footer -->
 \t\t<div id=\"footer\">
@@ -210,7 +235,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t\t\t<i class=\"mini-ico-map-marker mini-white\"></i>
 \t\t\t\t\t\t</p>\t
 \t\t\t\t\t\t<p>\t
-\t\t\t\t\t\t\t<i class=\"ico-z-iphone\"></i> Phone: (917) 543-6105
+\t\t\t\t\t\t\t<i class=\"ico-z-iphone\"></i> Phone:
 \t\t\t\t\t\t</p>
 \t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t<i class=\"mini-ico-envelope mini-white\"></i> Email: 
@@ -222,10 +247,10 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t</div>
 \t\t\t\t\t<!-- end: About -->
 \t
-\t\t\t\t\t<!-- start: Latest Tweets -->
+\t\t\t\t\t<!-- start: Like Us -->
 \t\t\t\t\t<div class=\"span3\">
 \t\t\t\t\t\t
-\t\t\t\t\t\t<h3>Latest Tweets</h3>
+\t\t\t\t\t\t<h3>Like Us</h3>
 \t\t\t\t\t\t
 \t\t\t\t\t\t<ul id=\"twitter\">
 \t\t\t\t\t\t\t
@@ -245,25 +270,31 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t\t<div class=\"flickr-widget\">
 \t\t\t\t\t\t
 \t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"http://itknowledgeexchange.techtarget.com/qa-processes/page/3/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<a href=\"/photos/supersoap\">
 \t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Rusty\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/supersoap.jpg\">
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Boathouse Isle of Danna\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
+\t\t\t\t\t\t\t\t<a href=\"/photos/structure.gif/\" + encodeURIComponent(\"http://itknowledgeexchange.techtarget.com/qa-processes/page/3/\") target=\"_blank\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"A photo of soap structure\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
 \t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Boathouse Isle of Danna\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"A photo of soap flow\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div id=\"flickr_badge_image4\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/12176303006/\"><img width=\"75\" height=\"75\" title=\"Dancin Dog\" alt=\"A photo on Flickr\" src=\"http://farm3.staticflickr.com/2888/12176303006_2d8f6e7924_s.jpg\"></a></div><div id=\"flickr_badge_image5\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8637527812/\"><img width=\"75\" height=\"75\" title=\"Beech Tree Strathmore\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8542/8637527812_326926a060_s.jpg\"></a></div><div id=\"flickr_badge_image6\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8627629925/\"><img width=\"75\" height=\"75\" title=\"Fowlis\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8521/8627629925_0781c1fc87_s.jpg\"></a></div><div id=\"flickr_badge_image7\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8207432285/\"><img width=\"75\" height=\"75\" title=\"Skotland\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8203/8207432285_b85b135b3e_s.jpg\"></a></div><div id=\"flickr_badge_image8\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8188704520/\"><img width=\"75\" height=\"75\" title=\"Elgol From Tokavaig\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8478/8188704520_8d7b0a9536_s.jpg\"></a></div><div id=\"flickr_badge_image9\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8182862834/\"><img width=\"75\" height=\"75\" title=\"Buachaille Etive Mhor\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8200/8182862834_45647ace5d_s.jpg\"></a></div><span class=\"flickr_badge_beacon\" style=\"position:absolute;left:-999em;top:-999em;visibility:hidden\"><img width=\"0\" height=\"0\" alt=\"\" src=\"http://geo.yahoo.com/p?s=792600102&amp;t=d4ae8115c12a6e4df3d002fa37e84a7f&amp;r=http%3A%2F%2Fonlinesoaptest%2F&amp;fl_ev=0&amp;lang=en&amp;intl=us\"></span>
+\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
+\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/layers.gif\">
+\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Layers\" alt=\"A photo of soap layers\" src=\"/bundles/onlinesoaptest/images/soap/layers.gif\">
+\t\t\t\t\t\t\t\t</a>\t\t\t
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div id=\"flickr_badge_image5\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8637527812/\"><img width=\"75\" height=\"75\" title=\"Beech Tree Strathmore\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8542/8637527812_326926a060_s.jpg\"></a></div><div id=\"flickr_badge_image6\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8627629925/\"><img width=\"75\" height=\"75\" title=\"Fowlis\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8521/8627629925_0781c1fc87_s.jpg\"></a></div><div id=\"flickr_badge_image7\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8207432285/\"><img width=\"75\" height=\"75\" title=\"Skotland\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8203/8207432285_b85b135b3e_s.jpg\"></a></div><div id=\"flickr_badge_image8\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8188704520/\"><img width=\"75\" height=\"75\" title=\"Elgol From Tokavaig\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8478/8188704520_8d7b0a9536_s.jpg\"></a></div><div id=\"flickr_badge_image9\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8182862834/\"><img width=\"75\" height=\"75\" title=\"Buachaille Etive Mhor\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8200/8182862834_45647ace5d_s.jpg\"></a></div><span class=\"flickr_badge_beacon\" style=\"position:absolute;left:-999em;top:-999em;visibility:hidden\"><img width=\"0\" height=\"0\" alt=\"\" src=\"http://geo.yahoo.com/p?s=792600102&amp;t=d4ae8115c12a6e4df3d002fa37e84a7f&amp;r=http%3A%2F%2Fonlinesoaptest%2F&amp;fl_ev=0&amp;lang=en&amp;intl=us\"></span>
 \t\t\t\t\t\t\t<div class=\"clear\"></div>
 \t\t\t\t\t\t\t
 
@@ -321,6 +352,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t
 \t\t</div>
 \t\t<!-- end: Footer -->
+-->
 \t\t
 \t\t<!-- start: Footer Menu -->
 \t\t<div id=\"footer-menu\" class=\"hidden-tablet hidden-phone\">
@@ -386,8 +418,10 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t
 \t\t\t\t<div class=\"sixteen columns\">
 \t\t\t\t\t<p>
-\t\t\t\t\t\t&copy; 2012   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
-        // line 304
+\t\t\t\t\t\t&copy; ";
+        // line 329
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
+        echo "   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
         echo "\" alt=\"Poland\" style=\"margin-top:-4px\">
 \t\t\t\t\t</p>
@@ -399,7 +433,30 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t</div>\t
 \t\t<!-- end: Copyright -->
 \t
+\t
+\t
+\t\t";
+        // line 341
+        $this->displayBlock('js', $context, $blocks);
+        // line 352
+        echo "\t
 \t";
+    }
+
+    // line 341
+    public function block_js($context, array $blocks = array())
+    {
+        // line 342
+        echo "\t\t
+\t\t\t<script type=\"text/javascript\">
+\t\t\t
+\t\t\t\t\$('document').ready( function() {
+\t\t
+\t\t\t\t});
+\t\t\t
+\t\t\t</script>
+\t\t\t
+\t\t";
     }
 
     public function getTemplateName()
@@ -414,6 +471,6 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
     public function getDebugInfo()
     {
-        return array (  391 => 304,  191 => 106,  188 => 105,  182 => 103,  125 => 48,  122 => 47,  118 => 105,  115 => 104,  113 => 103,  110 => 102,  108 => 47,  105 => 46,  102 => 45,  92 => 22,  88 => 21,  83 => 20,  80 => 19,  69 => 37,  61 => 32,  55 => 28,  53 => 19,  36 => 4,  33 => 3,);
+        return array (  450 => 342,  447 => 341,  442 => 352,  440 => 341,  423 => 329,  216 => 124,  213 => 123,  207 => 112,  150 => 49,  147 => 48,  142 => 354,  140 => 123,  128 => 113,  126 => 112,  115 => 103,  113 => 48,  110 => 47,  107 => 46,  97 => 22,  93 => 21,  88 => 20,  85 => 19,  76 => 40,  70 => 37,  62 => 32,  56 => 28,  54 => 19,  37 => 4,  34 => 3,);
     }
 }

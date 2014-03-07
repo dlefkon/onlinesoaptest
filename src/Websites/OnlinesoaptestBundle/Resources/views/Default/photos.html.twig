@@ -1,0 +1,40 @@
+{% extends 'OnlinesoaptestBundle::layout.html.twig' %}
+
+{% block body %}
+
+		{{ parent() }}
+				
+			{% block content %} 
+			
+				{% if 'supersoap' == app.request.get('name')  %}
+			
+					<a href="{{ app.request.get('href_url') }}" target="_blank">
+						<img alt="A photo of {{ app.request.get('name') }}" src="/bundles/onlinesoaptest/images/soap/supersoap.jpg">
+					</a>
+					
+				{% endif %}
+				
+			{% endblock content %}
+			
+			<script>
+	
+				$(".image_link").click( function() {
+	
+					console.log($(this).prop('id'));
+					console.log($(this).prop('id'));
+					
+					switch( $(this).prop('id') ) {
+					
+						case 'supersoap_href':
+							window.open( "http://itknowledgeexchange.techtarget.com/qa-processes/page/3/" );
+									
+					
+					}
+				
+				});
+			
+			</script>
+		
+</body> 
+
+{% endblock body %}

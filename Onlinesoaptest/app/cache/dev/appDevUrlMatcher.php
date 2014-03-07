@@ -142,6 +142,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::homeAction',  'title' => 'onlinesoaptest',  '_route' => 'onlinesoaptest_home_page',);
         }
 
+        // onlinesoaptest_ajax_page
+        if ($pathinfo === '/ajax') {
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::ajaxAction',  'title' => 'onlinesoaptest',  '_route' => 'onlinesoaptest_ajax_page',);
+        }
+
+        // onlinesoaptest_photos_page
+        if (0 === strpos($pathinfo, '/photos') && preg_match('#^/photos/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'onlinesoaptest_photos_page')), array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::photosAction',  'title' => 'onlinesoaptest',));
+        }
+
         // onlinesoaptest_about_page
         if ($pathinfo === '/about') {
             return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::aboutAction',  'title' => 'onlinesoaptest::about',  '_route' => 'onlinesoaptest_about_page',);

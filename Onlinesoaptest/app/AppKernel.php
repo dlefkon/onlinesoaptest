@@ -37,7 +37,7 @@ class AppKernel extends Kernel
 //             new Websites\ApplepiesBundle\ApplepiesBundle(),
 //             new Websites\LampquizBundle\LampquizBundle(),
             new Websites\BaseBundle\BaseBundle(),
-            new Websites\OnlinesoaptestBundle\OnlinesoaptestBundle(),
+            new Websites\OnlinesoaptestBundle\OnlinesoaptestBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

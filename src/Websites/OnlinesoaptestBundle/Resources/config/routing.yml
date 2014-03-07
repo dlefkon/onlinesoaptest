@@ -2,6 +2,14 @@ onlinesoaptest_home_page:
     pattern: '/'
     defaults: { _controller: OnlinesoaptestBundle:default:home, 'title' : 'onlinesoaptest' }
     
+onlinesoaptest_ajax_page:
+    pattern: '/ajax'
+    defaults: { _controller: OnlinesoaptestBundle:default:ajax, 'title' : 'onlinesoaptest' }
+    
+onlinesoaptest_photos_page:
+    pattern: '/photos/{name}'
+    defaults: { _controller: OnlinesoaptestBundle:default:photos, 'title' : 'onlinesoaptest' }
+    
 onlinesoaptest_about_page:
     pattern: '/about'
     defaults: { _controller: OnlinesoaptestBundle:default:about, 'title' : 'onlinesoaptest::about' }
