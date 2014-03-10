@@ -36,6 +36,7 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'onlinesoaptest_about_page' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::aboutAction',    'title' => 'onlinesoaptest::about',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/about',    ),  ),  4 =>   array (  ),),
         'onlinesoaptest_blog_page' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::blogAction',    'title' => 'onlinesoaptest::blog',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/blog',    ),  ),  4 =>   array (  ),),
         'onlinesoaptest_contact_page' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::contactAction',    'title' => 'onlinesoaptest::contact',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/contact',    ),  ),  4 =>   array (  ),),
+        'onlinesoaptest_sendemail_page' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::sendemailAction',    'title' => 'onlinesoaptest::Send Email',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/sendemail',    ),  ),  4 =>   array (  ),),
     );
 
     /**

@@ -118,14 +118,61 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t
 \t\t<!--start: Container -->
     \t<div class=\"container\">
+\t\t
+\t\t
+\t\t<div class=\"messages\">
 \t\t\t
+\t\t\t";
+        // line 113
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "error"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+            // line 114
+            echo "\t\t\t
+\t\t\t<div class=\"error\">
+\t\t\t    ";
+            // line 116
+            echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
+            echo "
+\t\t\t
+\t\t\t</div>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 120
+        echo "\t\t\t\t\t\t\t
+\t\t\t";
+        // line 121
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "success"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+            // line 122
+            echo "\t\t\t
+\t\t\t<div class=\"success\">
+\t\t\t    ";
+            // line 124
+            echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
+            echo "
+\t\t\t
+\t\t\t</div>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 128
+        echo "\t
+\t\t</div>
+\t
 \t\t\t<hr>
 \t\t\t\t
 \t\t\t\t";
-        // line 112
+        // line 133
         $this->displayBlock('content', $context, $blocks);
-        // line 113
-        echo "\t
+        // line 134
+        echo "\t\t\t\t<br>
 \t\t\t<hr>
 \t\t\t
 \t\t</div>
@@ -134,11 +181,11 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t</div>
 \t<!-- end: Wrapper  -->\t\t\t
 
-<!--\t
+\t
 \t";
-        // line 123
+        // line 144
         $this->displayBlock('footer', $context, $blocks);
-        // line 354
+        // line 235
         echo "\t
 ";
     }
@@ -203,157 +250,17 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t";
     }
 
-    // line 112
+    // line 133
     public function block_content($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 123
+    // line 144
     public function block_footer($context, array $blocks = array())
     {
-        // line 124
-        echo "\t
-\t\t<!-- start: Footer -->
-\t\t<div id=\"footer\">
-\t\t\t
-\t\t\t<!-- start: Container -->
-\t\t\t<div class=\"container\">
-\t\t\t\t
-\t\t\t\t<!-- start: Row -->
-\t\t\t\t<div class=\"row\">
-\t
-\t\t\t\t\t<!-- start: About -->
-\t\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t<h3>OnlineSoapTest</h3>
-\t
-\t\t\t\t\t<!--\t<p>
-\t\t\t\t\t\t\t<i class=\"mini-ico-map-marker mini-white\"></i> 
-\t\t\t\t\t\t</p>
-\t\t\t\t\t\t<p>\t
-\t\t\t\t\t\t\t<i class=\"mini-ico-map-marker mini-white\"></i>
-\t\t\t\t\t\t</p>\t
-\t\t\t\t\t\t<p>\t
-\t\t\t\t\t\t\t<i class=\"ico-z-iphone\"></i> Phone:
-\t\t\t\t\t\t</p>
-\t\t\t\t\t\t<p>
-\t\t\t\t\t\t\t<i class=\"mini-ico-envelope mini-white\"></i> Email: 
-\t\t\t\t\t\t</p> -->
-\t\t\t\t\t\t<p>
-\t\t\t\t\t\t\t<i class=\"mini-ico-globe mini-white\"></i> Web: <a href=\"http://lefkon.net\">Lefkon</a>
-\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t
-\t\t\t\t\t</div>
-\t\t\t\t\t<!-- end: About -->
-\t
-\t\t\t\t\t<!-- start: Like Us -->
-\t\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t<h3>Like Us</h3>
-\t\t\t\t\t\t
-\t\t\t\t\t\t<ul id=\"twitter\">
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t</ul>
-\t
-\t\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t</div>
-\t\t\t\t\t<!-- end: Latest Tweets -->
-\t
-\t\t\t\t\t<!-- start: Photo Stream -->
-\t\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t<h3>Photo Stream</h3>
-
-\t\t\t\t\t\t<div class=\"flickr-widget\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"/photos/supersoap\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Rusty\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/supersoap.jpg\">
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"/photos/structure.gif/\" + encodeURIComponent(\"http://itknowledgeexchange.techtarget.com/qa-processes/page/3/\") target=\"_blank\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"A photo of soap structure\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/structure.gif\">
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"A photo of soap flow\" alt=\"A photo\" src=\"/bundles/onlinesoaptest/images/soap/flow.gif\">
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"flickr_badge_image\">
-\t\t\t\t\t\t\t\t<a href=\"/bundles/onlinesoaptest/images/soap/layers.gif\">
-\t\t\t\t\t\t\t\t\t<img width=\"75\" height=\"75\" title=\"Layers\" alt=\"A photo of soap layers\" src=\"/bundles/onlinesoaptest/images/soap/layers.gif\">
-\t\t\t\t\t\t\t\t</a>\t\t\t
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div id=\"flickr_badge_image5\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8637527812/\"><img width=\"75\" height=\"75\" title=\"Beech Tree Strathmore\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8542/8637527812_326926a060_s.jpg\"></a></div><div id=\"flickr_badge_image6\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8627629925/\"><img width=\"75\" height=\"75\" title=\"Fowlis\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8521/8627629925_0781c1fc87_s.jpg\"></a></div><div id=\"flickr_badge_image7\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8207432285/\"><img width=\"75\" height=\"75\" title=\"Skotland\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8203/8207432285_b85b135b3e_s.jpg\"></a></div><div id=\"flickr_badge_image8\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8188704520/\"><img width=\"75\" height=\"75\" title=\"Elgol From Tokavaig\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8478/8188704520_8d7b0a9536_s.jpg\"></a></div><div id=\"flickr_badge_image9\" class=\"flickr_badge_image\"><a href=\"http://www.flickr.com/photos/29609591@N08/8182862834/\"><img width=\"75\" height=\"75\" title=\"Buachaille Etive Mhor\" alt=\"A photo on Flickr\" src=\"http://farm9.staticflickr.com/8200/8182862834_45647ace5d_s.jpg\"></a></div><span class=\"flickr_badge_beacon\" style=\"position:absolute;left:-999em;top:-999em;visibility:hidden\"><img width=\"0\" height=\"0\" alt=\"\" src=\"http://geo.yahoo.com/p?s=792600102&amp;t=d4ae8115c12a6e4df3d002fa37e84a7f&amp;r=http%3A%2F%2Fonlinesoaptest%2F&amp;fl_ev=0&amp;lang=en&amp;intl=us\"></span>
-\t\t\t\t\t\t\t<div class=\"clear\"></div>
-\t\t\t\t\t\t\t
-
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t
-\t\t\t\t\t</div>
-\t\t\t\t\t<!-- end: Photo Stream -->
-\t\t\t\t\t
-\t\t\t\t\t<!-- start: Follow Us -->
-\t\t\t\t\t<div class=\"span3\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t<h3>Follow Us</h3>
-\t\t\t\t\t\t
-\t\t\t\t\t\t<div id=\"social-r\" class=\"tooltips\">
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Amazon\" class=\"amazon\">Amazon</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Behance\" class=\"behance\">Behance</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Blogger\" class=\"blogger\">Blogger</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"DeviantART\" class=\"deviantart\">DeviantART</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Dribbble\" class=\"dribbble\">Dribbble</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Dropbox\" class=\"dropbox\">Dropbox</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Evernote\" class=\"evernote\">Evernote</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Facebook\" class=\"facebook\">Facebook</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Forrst\" class=\"forrst\">Forrst</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Github\" class=\"github\">Github</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Google Plus\" class=\"googleplus\">Google Plus</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Joli Cloud\" class=\"jolicloud\">Joli Cloud</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Last FM\" class=\"last-fm\">Last FM</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"LinkedIn\" class=\"linkedin\">LinkedIn</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Picasa\" class=\"picasa\">Picasa</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Pintrest\" class=\"pintrest\">Pintrest</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"RSS\" class=\"rss\">RSS</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Skype\" class=\"skype\">Skype</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Spotify\" class=\"spotify\">Spotify</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"StumpleUpon\" class=\"stumbleupon\">StumbleUpon</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Tumblr\" class=\"tumblr\">Tumblr</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Twitter\" class=\"twitter\">Twitter</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Vimeo\" class=\"vimeo\">Vimeo</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"WordPress\" class=\"wordpress\">WordPress</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Xing\" class=\"xing\">Xing</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Yahoo\" class=\"yahoo\">Yahoo</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"YouTube\" class=\"youtube\">YouTube</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"Soundcloud\" class=\"soundcloud\">Soundcloud</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"myspace\" class=\"myspace\">myspace</a>
-\t\t\t\t\t\t\t<a href=\"#\" rel=\"tooltip\" title=\"vkontakte\" class=\"vkontakte\">vkontakte</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t
-\t\t\t\t\t</div>
-\t\t\t\t\t<!-- end: Follow Us -->
-\t\t\t\t\t
-\t\t\t\t</div>
-\t\t\t\t<!-- end: Row -->\t
-\t\t\t\t
-\t\t\t</div>
-\t\t\t<!-- end: Container  -->
-\t
-\t\t</div>
-\t\t<!-- end: Footer -->
--->
-\t\t
+        // line 145
+        echo "
 \t\t<!-- start: Footer Menu -->
 \t\t<div id=\"footer-menu\" class=\"hidden-tablet hidden-phone\">
 \t
@@ -366,7 +273,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t<!-- start: Footer Menu Logo -->
 \t\t\t\t\t<div class=\"span2\">
 \t\t\t\t\t\t<div id=\"footer-menu-logo\">
-\t\t\t\t\t\t\t<a class=\"brand\" href=\"#\">Online<span>Soap</span>Test.</a>
+\t\t\t\t\t\t\t<a class=\"brand\" href=\"#\">Online<span>Soap</span>Test</a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<!-- end: Footer Menu Logo -->
@@ -419,7 +326,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t<div class=\"sixteen columns\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\t&copy; ";
-        // line 329
+        // line 210
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
@@ -436,17 +343,17 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t
 \t
 \t\t";
-        // line 341
+        // line 222
         $this->displayBlock('js', $context, $blocks);
-        // line 352
+        // line 233
         echo "\t
 \t";
     }
 
-    // line 341
+    // line 222
     public function block_js($context, array $blocks = array())
     {
-        // line 342
+        // line 223
         echo "\t\t
 \t\t\t<script type=\"text/javascript\">
 \t\t\t
@@ -471,6 +378,6 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
     public function getDebugInfo()
     {
-        return array (  450 => 342,  447 => 341,  442 => 352,  440 => 341,  423 => 329,  216 => 124,  213 => 123,  207 => 112,  150 => 49,  147 => 48,  142 => 354,  140 => 123,  128 => 113,  126 => 112,  115 => 103,  113 => 48,  110 => 47,  107 => 46,  97 => 22,  93 => 21,  88 => 20,  85 => 19,  76 => 40,  70 => 37,  62 => 32,  56 => 28,  54 => 19,  37 => 4,  34 => 3,);
+        return array (  357 => 223,  354 => 222,  349 => 233,  347 => 222,  330 => 210,  263 => 145,  260 => 144,  254 => 133,  197 => 49,  194 => 48,  189 => 235,  187 => 144,  175 => 134,  173 => 133,  166 => 128,  156 => 124,  152 => 122,  148 => 121,  145 => 120,  135 => 116,  131 => 114,  127 => 113,  115 => 103,  113 => 48,  110 => 47,  107 => 46,  97 => 22,  93 => 21,  88 => 20,  85 => 19,  76 => 40,  70 => 37,  62 => 32,  56 => 28,  54 => 19,  37 => 4,  34 => 3,);
     }
 }

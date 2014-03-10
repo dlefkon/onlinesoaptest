@@ -2718,7 +2718,6 @@ form#newsletter input[type=submit] {
 	
 }
 
-
 .big_checkbox {
 	vertical-align:super;
 }
@@ -2731,7 +2730,31 @@ form#newsletter input[type=submit] {
 	text-decoration:none !important;
 }
 
-
 label, input, button, select, textarea {
 	vertical-align: super;
+}
+
+
+#footer-nav {
+	margin-left:20px !important;
+}
+
+
+.span8 {
+	margin-bottom:20px;
+}
+
+.error {
+	color:red;
+}
+
+.messages {
+	
+	margin:20px;
+	font-size:20px
+	
+}
+
+.success {
+	color:green;
 }

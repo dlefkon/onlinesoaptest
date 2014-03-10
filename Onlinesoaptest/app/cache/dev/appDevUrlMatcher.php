@@ -167,6 +167,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::contactAction',  'title' => 'onlinesoaptest::contact',  '_route' => 'onlinesoaptest_contact_page',);
         }
 
+        // onlinesoaptest_sendemail_page
+        if ($pathinfo === '/sendemail') {
+            return array (  '_controller' => 'Websites\\OnlinesoaptestBundle\\Controller\\defaultController::sendemailAction',  'title' => 'onlinesoaptest::Send Email',  '_route' => 'onlinesoaptest_sendemail_page',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

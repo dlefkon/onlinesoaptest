@@ -126,4 +126,24 @@ exit;
     	return $this->render('OnlinesoaptestBundle:Default:contact.html.twig', array( 'title' => $title ));
     	 
     }
+    
+    public function sendemailAction( Request $request, $title) {
+
+    	$headers = 'From: ' . $request->get('contact_email');
+ 
+    	$result = mail( 'dlefkon@gmail.com', 'Mail from OnlineSoapTest Contact form', $request->get('contact_message'), $headers );
+  	
+    	if( $result ) { 
+
+    		$this->get('session')->getFlashBag()->add('success', 'Message Sent. Thanks for your feedback :)');
+    		
+    	} else {
+
+    		$this->get('session')->getFlashBag()->add('error', 'Message NOT Sent');
+    		
+    	}
+
+    	return $this->render('OnlinesoaptestBundle:Default:contact.html.twig', array( 'title' => $title ));
+    	 
+    }
 }

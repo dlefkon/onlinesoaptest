@@ -17,7 +17,11 @@ onlinesoaptest_about_page:
 onlinesoaptest_blog_page:
     pattern: '/blog'
     defaults: { _controller: OnlinesoaptestBundle:default:blog, 'title' : 'onlinesoaptest::blog' }
-    
+
 onlinesoaptest_contact_page:
     pattern: '/contact'
     defaults: { _controller: OnlinesoaptestBundle:default:contact, 'title' : 'onlinesoaptest::contact' }
+
+onlinesoaptest_sendemail_page:
+    pattern: '/sendemail'
+    defaults: { _controller: OnlinesoaptestBundle:default:sendemail, 'title' : 'onlinesoaptest::Send Email' }

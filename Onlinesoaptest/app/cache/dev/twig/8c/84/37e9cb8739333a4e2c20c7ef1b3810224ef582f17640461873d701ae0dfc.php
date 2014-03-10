@@ -35,7 +35,7 @@ class __TwigTemplate_8c8437e9cb8739333a4e2c20c7ef1b3810224ef582f17640461873d701a
 \tI was unable to find a useable one that didn't have to be downloaded.  <br>
 \tSoo .. I decided to make one.<br>
 \t<br>
-\tThis is kinda still in a beta stage and I would welcome any feedback you have.<br>
+\tThis is kinda still in a beta stage and I would welcome any <a href=\"contact\">feedback</a> you have.<br>
 \t<br>
 \tThanks,
 \t<br>
