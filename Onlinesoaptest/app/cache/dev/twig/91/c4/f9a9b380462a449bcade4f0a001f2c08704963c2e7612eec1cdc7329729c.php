@@ -38,7 +38,7 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t
 \t\t\t\t<tr>
 \t\t\t\t\t
-\t\t\t\t\t<td style=\"text-align:right;\"><label for=\"demo\" style=\" margin-right:10px;\">Demo:</label></td>
+\t\t\t\t\t<td style=\"text-align:right;\"><label for=\"demo\" style=\"margin-right:10px;\">Demo:</label></td>
 \t\t\t\t\t<td><input id=\"demo\" name=\"demo\" type=\"checkbox\" class=\"big_checkbox\"/></td>
 \t\t\t\t\t
 \t\t\t\t\t
@@ -286,20 +286,18 @@ function getOperations() {
 \$(document).ready(function() {
 
 
-
 \t\$('#parameters').on('click', '.add_param, .remove_param', function(){
 
 \t\tif(\$(this).hasClass('add_param')) {
-console.log('add');\t\t
+
 \t\t\tif( '' === new_row) new_row = \$(this).parents('.param_row').html().replace( /<label>Name:<\\/label>/, '').replace( /<label>Value:<\\/label>/, '').replace( /\\-/g , \"\\+\");
-console.log(new_row);
+
 \t\t\t\$(this).parents('.param_row').append( new_row );
 \t\t\t
 \t\t\t\$(this).html('-').addClass('remove_param').removeClass('add_param').change();
 \t\t
 \t\t} else if (\$(this).hasClass('remove_param')) {
-console.log('remove');\t
-console.log(\$(this).parents('tr'));
+
 \t\t\t\$(this).parents('tr.row_container').remove();
 \t\t
 \t\t} else {
@@ -308,12 +306,7 @@ console.log(\$(this).parents('tr'));
 \t\t\t
 \t\t}
 \t});
-
-
-
-
-
-
+\t
 
 \t\$('#view').click( function() {
 \t
@@ -322,10 +315,6 @@ console.log(\$(this).parents('tr'));
 \t\treturn false;
 \t\t
 \t});
-
-
-\t
-\t
 \t
 \t
 \t\$('#demo').click(function(){
@@ -333,19 +322,19 @@ console.log(\$(this).parents('tr'));
 \t\tif(\$(this).prop('checked') === true ){
 
 \t\t\twsdl = \$('#wsdl').val();
-\t\t\t\$('#wsdl').val('http://www.w3.org/2002/ws/databinding/edcopy/collection/cache/AWS-AmazonWebServices.xml');
+\t\t\t\$('#wsdl').val('http://www.webservicex.net/medicareSupplier.asmx?WSDL');
 \t
 \t\t\tendpoint = \$('#endpoint').val();
-\t\t\t\$('#endpoint').val('http://soap.amazon.com');
+\t\t\t\$('#endpoint').val('http://www.webservicex.net/medicareSupplier.asmx');
 \t
 \t\t\toperation = \$('#operation').val();
-\t\t\t\$('#operation').val('ArtistSearchRequest');
+\t\t\t\$('#operation').val('GetSupplierByZipCode');
 \t
 \t\t\tparameter_name_pnv_0 = \$('#parameter_name_pnv_0').val();
-\t\t\t\$('#parameter_name_pnv_0').val('artist');
+\t\t\t\$('#parameter_name_pnv_0').val('zip');
 \t
 \t\t\tparameter_value_pnv_0 = \$('#parameter_value_pnv_0').val();
-\t\t\t\$('#parameter_value_pnv_0').val('U2');
+\t\t\t\$('#parameter_value_pnv_0').val('10001');
 \t\t\t
 \t\t\tparameter_name_pnv_1 = \$('#parameter_name_pnv_1').val();
 \t\t\t\$('#parameter_name_pnv_1').val('page');
@@ -379,19 +368,19 @@ console.log(\$(this).parents('tr'));
 \t\t\t
 \t\t\tversion = \$('#version').val();
 \t\t\t\$('#version').val(";
-        // line 296
+        // line 285
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tstyle = \$('#style').val();
 \t\t\t\$('#style').val( ";
-        // line 299
+        // line 288
         echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tencoding = \$('#encoding').val();
 \t\t\t\$('#encoding').val(";
-        // line 302
+        // line 291
         echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
         echo ");
 \t\t\t
@@ -402,25 +391,25 @@ console.log(\$(this).parents('tr'));
 \t\t\t\$('#operation').val(operation);
 \t\t\t
 \t\t\t";
-        // line 310
+        // line 299
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable(range(0, 20));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 311
+            // line 300
             echo "   
    \t\t\t\t";
-            // line 312
+            // line 301
             if ($this->getAttribute((isset($context["parameter_name_pnv_loop"]) ? $context["parameter_name_pnv_loop"] : null), "index", array(), "any", true, true)) {
-                // line 313
+                // line 302
                 echo "   \t\t\t\t
 \t\t\t\t\t\$('#parameter_name_pnv_";
-                // line 314
+                // line 303
                 echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
                 echo "').val(parameter_name_pnv_";
                 echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
                 echo ");
 \t\t\t\t\t\$('#parameter_value_pnv_";
-                // line 315
+                // line 304
                 echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
                 echo "').val(parameter_value_pnv_";
                 echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
@@ -428,14 +417,14 @@ console.log(\$(this).parents('tr'));
 \t\t\t\t
 \t\t\t\t";
             }
-            // line 318
+            // line 307
             echo "\t\t\t\t
 \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 320
+        // line 309
         echo "\t\t\t
 \t\t\t\$('#version').val(version);
 \t\t\t\$('#style').val(style);
@@ -444,6 +433,7 @@ console.log(\$(this).parents('tr'));
 \t});
 \t
 \t\$('#demo').prop('checked', false);
+\t
 });
 
 </script>
@@ -464,6 +454,6 @@ console.log(\$(this).parents('tr'));
 
     public function getDebugInfo()
     {
-        return array (  439 => 320,  432 => 318,  424 => 315,  418 => 314,  415 => 313,  413 => 312,  410 => 311,  406 => 310,  395 => 302,  389 => 299,  383 => 296,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
+        return array (  428 => 309,  421 => 307,  413 => 304,  407 => 303,  404 => 302,  402 => 301,  399 => 300,  395 => 299,  384 => 291,  378 => 288,  372 => 285,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
     }
 }

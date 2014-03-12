@@ -10,7 +10,7 @@
 			
 				<tr>
 					
-					<td style="text-align:right;"><label for="demo" style=" margin-right:10px;">Demo:</label></td>
+					<td style="text-align:right;"><label for="demo" style="margin-right:10px;">Demo:</label></td>
 					<td><input id="demo" name="demo" type="checkbox" class="big_checkbox"/></td>
 					
 					
@@ -201,20 +201,18 @@ function getOperations() {
 $(document).ready(function() {
 
 
-
 	$('#parameters').on('click', '.add_param, .remove_param', function(){
 
 		if($(this).hasClass('add_param')) {
-console.log('add');		
+
 			if( '' === new_row) new_row = $(this).parents('.param_row').html().replace( /<label>Name:<\/label>/, '').replace( /<label>Value:<\/label>/, '').replace( /\-/g , "\+");
-console.log(new_row);
+
 			$(this).parents('.param_row').append( new_row );
 			
 			$(this).html('-').addClass('remove_param').removeClass('add_param').change();
 		
 		} else if ($(this).hasClass('remove_param')) {
-console.log('remove');	
-console.log($(this).parents('tr'));
+
 			$(this).parents('tr.row_container').remove();
 		
 		} else {
@@ -223,12 +221,7 @@ console.log($(this).parents('tr'));
 			
 		}
 	});
-
-
-
-
-
-
+	
 
 	$('#view').click( function() {
 	
@@ -237,10 +230,6 @@ console.log($(this).parents('tr'));
 		return false;
 		
 	});
-
-
-	
-	
 	
 	
 	$('#demo').click(function(){
@@ -248,19 +237,19 @@ console.log($(this).parents('tr'));
 		if($(this).prop('checked') === true ){
 
 			wsdl = $('#wsdl').val();
-			$('#wsdl').val('http://www.w3.org/2002/ws/databinding/edcopy/collection/cache/AWS-AmazonWebServices.xml');
+			$('#wsdl').val('http://www.webservicex.net/medicareSupplier.asmx?WSDL');
 	
 			endpoint = $('#endpoint').val();
-			$('#endpoint').val('http://soap.amazon.com');
+			$('#endpoint').val('http://www.webservicex.net/medicareSupplier.asmx');
 	
 			operation = $('#operation').val();
-			$('#operation').val('ArtistSearchRequest');
+			$('#operation').val('GetSupplierByZipCode');
 	
 			parameter_name_pnv_0 = $('#parameter_name_pnv_0').val();
-			$('#parameter_name_pnv_0').val('artist');
+			$('#parameter_name_pnv_0').val('zip');
 	
 			parameter_value_pnv_0 = $('#parameter_value_pnv_0').val();
-			$('#parameter_value_pnv_0').val('U2');
+			$('#parameter_value_pnv_0').val('10001');
 			
 			parameter_name_pnv_1 = $('#parameter_name_pnv_1').val();
 			$('#parameter_name_pnv_1').val('page');
@@ -325,6 +314,7 @@ console.log($(this).parents('tr'));
 	});
 	
 	$('#demo').prop('checked', false);
+	
 });
 
 </script>
