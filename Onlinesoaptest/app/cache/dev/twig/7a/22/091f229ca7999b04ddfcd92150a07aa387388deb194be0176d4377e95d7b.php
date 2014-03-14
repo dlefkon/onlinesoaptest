@@ -51,26 +51,26 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
     ";
         // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 28
+        // line 25
         echo "\t<!-- end: CSS -->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
 \t\t<link href=\"";
-        // line 32
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/css/ie.css"), "html", null, true);
         echo " rel=\"stylesheet\">
     <![endif]-->
 
 \t<!--[if IE 9]>
     \t<link href=\"";
-        // line 36
+        // line 33
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/css/ie9.css"), "html", null, true);
         echo " rel=\"stylesheet\">
     <![endif]-->
      \t
 \t<script src=\"";
-        // line 39
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.js"), "html", null, true);
         echo "\"></script>
      \t
@@ -98,22 +98,22 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
         // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/css/styles.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Droid+Sans:400,700\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Droid+Serif\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Boogaloo\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Economica:700,400italic\">
+        <link href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/css/fonts.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
     ";
     }
 
-    // line 45
+    // line 42
     public function block_body($context, array $blocks = array())
     {
-        // line 46
+        // line 43
         echo "
 \t";
-        // line 47
+        // line 44
         $this->displayBlock('header', $context, $blocks);
-        // line 102
+        // line 99
         echo "\t
 \t<!--start: Wrapper-->
 \t<div id=\"wrapper\">
@@ -125,15 +125,15 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t<div class=\"messages\">
 \t\t\t
 \t\t\t";
-        // line 112
+        // line 109
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "error"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 113
+            // line 110
             echo "\t\t\t
 \t\t\t<div class=\"error\">
 \t\t\t    ";
-            // line 115
+            // line 112
             echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
             echo "
 \t\t\t
@@ -143,18 +143,18 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 119
+        // line 116
         echo "\t\t\t\t\t\t\t
 \t\t\t";
-        // line 120
+        // line 117
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "flashbag"), "get", array(0 => "success"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 121
+            // line 118
             echo "\t\t\t
 \t\t\t<div class=\"success\">
 \t\t\t    ";
-            // line 123
+            // line 120
             echo twig_escape_filter($this->env, (isset($context["flashMessage"]) ? $context["flashMessage"] : $this->getContext($context, "flashMessage")), "html", null, true);
             echo "
 \t\t\t
@@ -164,16 +164,16 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 127
+        // line 124
         echo "\t
 \t\t</div>
 \t
 \t\t\t<hr>
 \t\t\t\t
 \t\t\t\t";
-        // line 132
+        // line 129
         $this->displayBlock('content', $context, $blocks);
-        // line 133
+        // line 130
         echo "\t\t\t\t<br>
 \t\t\t<hr>
 \t\t\t
@@ -185,17 +185,17 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
 \t
 \t";
-        // line 143
+        // line 140
         $this->displayBlock('footer', $context, $blocks);
-        // line 252
+        // line 249
         echo "\t
 ";
     }
 
-    // line 47
+    // line 44
     public function block_header($context, array $blocks = array())
     {
-        // line 48
+        // line 45
         echo "
 \t\t<!--start: Header -->
 \t\t<header>
@@ -252,16 +252,16 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t";
     }
 
-    // line 132
+    // line 129
     public function block_content($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 143
+    // line 140
     public function block_footer($context, array $blocks = array())
     {
-        // line 144
+        // line 141
         echo "
 \t\t<!-- start: Footer Menu -->
 \t\t<div id=\"footer-menu\" class=\"hidden-tablet hidden-phone\">
@@ -328,7 +328,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t<div class=\"sixteen columns\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\t&copy; ";
-        // line 209
+        // line 206
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
@@ -343,22 +343,22 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t<!-- end: Copyright -->
 \t
 \t";
-        // line 219
+        // line 216
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "environment"), "html", null, true);
         echo "
 \t
 \t\t";
-        // line 221
+        // line 218
         $this->displayBlock('js', $context, $blocks);
-        // line 250
+        // line 247
         echo "\t
 \t";
     }
 
-    // line 221
+    // line 218
     public function block_js($context, array $blocks = array())
     {
-        // line 222
+        // line 219
         echo "\t\t
 \t\t    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 \t\t    <!--[if lt IE 9]>
@@ -372,9 +372,9 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t});
 \t\t\t
 \t\t\t   ";
-        // line 234
+        // line 231
         if (("live" == $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "environment"))) {
-            // line 235
+            // line 232
             echo "\t\t\t
 \t\t\t\t  var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");
 \t\t\t\t  document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));
@@ -387,7 +387,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t
 \t\t\t   ";
         }
-        // line 246
+        // line 243
         echo "\t\t\t
 \t\t\t</script>
 \t\t\t
@@ -406,6 +406,6 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
     public function getDebugInfo()
     {
-        return array (  391 => 246,  376 => 234,  362 => 222,  359 => 221,  354 => 250,  352 => 221,  347 => 219,  332 => 209,  265 => 144,  262 => 143,  256 => 132,  199 => 48,  196 => 47,  191 => 252,  189 => 143,  177 => 133,  175 => 132,  168 => 127,  158 => 123,  154 => 121,  150 => 120,  147 => 119,  137 => 115,  133 => 113,  129 => 112,  117 => 102,  115 => 47,  112 => 46,  109 => 45,  99 => 22,  95 => 21,  91 => 20,  86 => 19,  83 => 18,  74 => 39,  68 => 36,  61 => 32,  55 => 28,  53 => 18,  37 => 4,  34 => 3,  428 => 309,  421 => 307,  413 => 304,  407 => 303,  404 => 302,  402 => 301,  399 => 300,  395 => 299,  384 => 291,  378 => 235,  372 => 285,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
+        return array (  391 => 243,  378 => 232,  376 => 231,  362 => 219,  359 => 218,  354 => 247,  352 => 218,  347 => 216,  332 => 206,  265 => 141,  262 => 140,  256 => 129,  199 => 45,  196 => 44,  191 => 249,  189 => 140,  177 => 130,  175 => 129,  168 => 124,  158 => 120,  154 => 118,  150 => 117,  147 => 116,  137 => 112,  133 => 110,  129 => 109,  117 => 99,  115 => 44,  112 => 43,  109 => 42,  103 => 23,  99 => 22,  95 => 21,  91 => 20,  86 => 19,  83 => 18,  74 => 36,  68 => 33,  61 => 29,  55 => 25,  53 => 18,  37 => 4,  34 => 3,);
     }
 }
