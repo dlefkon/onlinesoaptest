@@ -9,10 +9,6 @@ var parameter_value = '';
 	
 $(document).ready(function() {
 	
-//	$("form").validate();
-	
-	$('#submit').on('click', function(){
-	    if($('form').valid()) getOperations();
-	});
+	$("form").validate();
 	
 });

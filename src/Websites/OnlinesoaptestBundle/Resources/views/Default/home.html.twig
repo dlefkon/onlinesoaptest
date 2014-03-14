@@ -52,7 +52,7 @@
 				    
 				    <td>
 				    
-					    <table>
+				    	<table>
 					    
 					    	<tbody class="param_row">
 					    	
@@ -64,11 +64,11 @@
 											<tr class="row_container">
 												<td>
 													<label>Name:</label>
-													<input type='text' size='20' />
+													<input class="param_name" type='text' size='20' />
 												</td>
 												<td>
 													<label>Value:</label>
-													<input type='text' size='20' />
+													<input class="param_value" type='text' size='20' />
 													
 													<a class='add_param' href='javascript:void(0);'>+</a>
 														
@@ -180,26 +180,8 @@ var original_param = '';
 var new_param = '';
 var new_row = '';
 
-function getOperations() {
-	$('#response').html('');
-	var ajax_url = 'ajax';
-	$.ajax({
-		data : {'wsdl':$('#wsdl').val(),
-				'endpoint':$('#endpoint').val(),
-				'version':$('#version').val(),
-				'style':$('#style').val(),
-				'encoding':$('#encoding').val(),
-				'operation':$('#operation').val()
-		},	
-		url : ajax_url,
-		success : function(response) {
-			$('#response').html(response).show();
-		}
-	});
-}
 
 $(document).ready(function() {
-
 
 	$('#parameters').on('click', '.add_param, .remove_param', function(){
 
@@ -295,18 +277,6 @@ $(document).ready(function() {
 			$('#wsdl').val(wsdl);
 			$('#endpoint').val(endpoint);
 			$('#operation').val(operation);
-			
-			{% for i in 0..20 %}
-   
-   				{% if parameter_name_pnv_loop.index is defined %}
-   				
-					$('#parameter_name_pnv_{{ i }}').val(parameter_name_pnv_{{ i }});
-					$('#parameter_value_pnv_{{ i }}').val(parameter_value_pnv_{{ i }});
-				
-				{% endif %}
-				
-			{% endfor %}
-			
 			$('#version').val(version);
 			$('#style').val(style);
 			$('#encoding').val(encoding);
@@ -315,6 +285,52 @@ $(document).ready(function() {
 	
 	$('#demo').prop('checked', false);
 	
+	$('form').validate();
+		
+	$('form').submit( function() { return false; });
+		
+	$('#submit').on('click', function() {
+		
+		if( $('form').valid() ) {
+		
+			var params_array = [];
+			
+			$('.param_name').each( function( ) {
+					
+				name = $(this).val();
+				value = $(this).parent('td').siblings('td').find('.param_value').val();
+				
+		
+				params_array.push({
+				    name : name,
+				    value : value
+				}); 
+			});
+			
+		//	var params_encoded = JSON.parse( params_array);
+//console.log(params_encoded);
+			
+			$('#response').html('');
+			var ajax_url = 'ajax';
+			$.ajax({
+				data : {'wsdl':$('#wsdl').val(),
+						'endpoint':$('#endpoint').val(),
+						'version':$('#version').val(),
+						'style':$('#style').val(),
+						'encoding':$('#encoding').val(),
+						'operation':$('#operation').val(),
+						'parameters': params_array
+				},	
+				url : ajax_url,
+				success : function(response) {
+					$('#response').html(response).show();
+				}
+		    });
+		    
+		}
+		
+	});
+
 });
 
 </script>

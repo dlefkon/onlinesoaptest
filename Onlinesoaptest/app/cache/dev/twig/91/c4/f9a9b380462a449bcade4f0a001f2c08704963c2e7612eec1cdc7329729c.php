@@ -80,7 +80,7 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t    
 \t\t\t\t    <td>
 \t\t\t\t    
-\t\t\t\t\t    <table>
+\t\t\t\t    \t<table>
 \t\t\t\t\t    
 \t\t\t\t\t    \t<tbody class=\"param_row\">
 \t\t\t\t\t    \t
@@ -92,11 +92,11 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t\t\t\t\t\t\t<tr class=\"row_container\">
 \t\t\t\t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<label>Name:</label>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
+\t\t\t\t\t\t\t\t\t\t\t\t\t<input class=\"param_name\" type='text' size='20' />
 \t\t\t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<label>Value:</label>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='text' size='20' />
+\t\t\t\t\t\t\t\t\t\t\t\t\t<input class=\"param_value\" type='text' size='20' />
 \t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a class='add_param' href='javascript:void(0);'>+</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t
@@ -265,26 +265,8 @@ var original_param = '';
 var new_param = '';
 var new_row = '';
 
-function getOperations() {
-\t\$('#response').html('');
-\tvar ajax_url = 'ajax';
-\t\$.ajax({
-\t\tdata : {'wsdl':\$('#wsdl').val(),
-\t\t\t\t'endpoint':\$('#endpoint').val(),
-\t\t\t\t'version':\$('#version').val(),
-\t\t\t\t'style':\$('#style').val(),
-\t\t\t\t'encoding':\$('#encoding').val(),
-\t\t\t\t'operation':\$('#operation').val()
-\t\t},\t
-\t\turl : ajax_url,
-\t\tsuccess : function(response) {
-\t\t\t\$('#response').html(response).show();
-\t\t}
-\t});
-}
 
 \$(document).ready(function() {
-
 
 \t\$('#parameters').on('click', '.add_param, .remove_param', function(){
 
@@ -368,19 +350,19 @@ function getOperations() {
 \t\t\t
 \t\t\tversion = \$('#version').val();
 \t\t\t\$('#version').val(";
-        // line 285
+        // line 267
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tstyle = \$('#style').val();
 \t\t\t\$('#style').val( ";
-        // line 288
+        // line 270
         echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tencoding = \$('#encoding').val();
 \t\t\t\$('#encoding').val(";
-        // line 291
+        // line 273
         echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
         echo ");
 \t\t\t
@@ -389,43 +371,6 @@ function getOperations() {
 \t\t\t\$('#wsdl').val(wsdl);
 \t\t\t\$('#endpoint').val(endpoint);
 \t\t\t\$('#operation').val(operation);
-\t\t\t
-\t\t\t";
-        // line 299
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, 20));
-        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 300
-            echo "   
-   \t\t\t\t";
-            // line 301
-            if ($this->getAttribute((isset($context["parameter_name_pnv_loop"]) ? $context["parameter_name_pnv_loop"] : null), "index", array(), "any", true, true)) {
-                // line 302
-                echo "   \t\t\t\t
-\t\t\t\t\t\$('#parameter_name_pnv_";
-                // line 303
-                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-                echo "').val(parameter_name_pnv_";
-                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-                echo ");
-\t\t\t\t\t\$('#parameter_value_pnv_";
-                // line 304
-                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-                echo "').val(parameter_value_pnv_";
-                echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
-                echo ");
-\t\t\t\t
-\t\t\t\t";
-            }
-            // line 307
-            echo "\t\t\t\t
-\t\t\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 309
-        echo "\t\t\t
 \t\t\t\$('#version').val(version);
 \t\t\t\$('#style').val(style);
 \t\t\t\$('#encoding').val(encoding);
@@ -434,6 +379,52 @@ function getOperations() {
 \t
 \t\$('#demo').prop('checked', false);
 \t
+\t\$('form').validate();
+\t\t
+\t\$('form').submit( function() { return false; });
+\t\t
+\t\$('#submit').on('click', function() {
+\t\t
+\t\tif( \$('form').valid() ) {
+\t\t
+\t\t\tvar params_array = [];
+\t\t\t
+\t\t\t\$('.param_name').each( function( ) {
+\t\t\t\t\t
+\t\t\t\tname = \$(this).val();
+\t\t\t\tvalue = \$(this).parent('td').siblings('td').find('.param_value').val();
+\t\t\t\t
+\t\t
+\t\t\t\tparams_array.push({
+\t\t\t\t    name : name,
+\t\t\t\t    value : value
+\t\t\t\t}); 
+\t\t\t});
+\t\t\t
+\t\t//\tvar params_encoded = JSON.parse( params_array);
+//console.log(params_encoded);
+\t\t\t
+\t\t\t\$('#response').html('');
+\t\t\tvar ajax_url = 'ajax';
+\t\t\t\$.ajax({
+\t\t\t\tdata : {'wsdl':\$('#wsdl').val(),
+\t\t\t\t\t\t'endpoint':\$('#endpoint').val(),
+\t\t\t\t\t\t'version':\$('#version').val(),
+\t\t\t\t\t\t'style':\$('#style').val(),
+\t\t\t\t\t\t'encoding':\$('#encoding').val(),
+\t\t\t\t\t\t'operation':\$('#operation').val(),
+\t\t\t\t\t\t'parameters': params_array
+\t\t\t\t},\t
+\t\t\t\turl : ajax_url,
+\t\t\t\tsuccess : function(response) {
+\t\t\t\t\t\$('#response').html(response).show();
+\t\t\t\t}
+\t\t    });
+\t\t    
+\t\t}
+\t\t
+\t});
+
 });
 
 </script>
@@ -454,6 +445,6 @@ function getOperations() {
 
     public function getDebugInfo()
     {
-        return array (  428 => 309,  421 => 307,  413 => 304,  407 => 303,  404 => 302,  402 => 301,  399 => 300,  395 => 299,  384 => 291,  378 => 288,  372 => 285,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
+        return array (  366 => 273,  360 => 270,  354 => 267,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
     }
 }

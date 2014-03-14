@@ -46,32 +46,36 @@ class DefaultController extends Controller {
 	
 		$operation = $request->get('operation');
 		
-		$parameters = array();
-		
-// 		for($i=0; $i<20; $i++){
-// 			if(isset($_GET["parameter_name_pnv_$i"]) && $_GET["parameter_name_pnv_$i"] != '' && isset($_GET["parameter_value_pnv_$i"]) && $_GET["parameter_value_pnv_$i"] != ''){
-// 				$parameters[$_GET["parameter_name_pnv_$i"]] = $_GET["parameter_value_pnv_$i"];
-// 			}
-// 		}
-		
-// 		$table_input = $soap_client->getOptions();
-// 		$table_input['operation'] = $operation;
-// 		$table_input['parameters'] = $parameters;
+		$parameters = $request->get('parameters');
+
+		$options = $soap_client->getOptions();
 	
 		echo '<table class="response">';
+		echo "<tr class='header_row'><td>Operation</td><td>$operation</td></tr>";
+		
+		foreach( $parameters as $param ) {
+			
+			$name  = $param['name'];
+			$value = $param['value'];
+			
+			echo "<tr class='header_row'><td>Parameter: </td><td>$name : $value</td></tr>";
+			
+			$params[$name] = $value;
+		}
+		
 		$i = 1;
 		foreach($options as $key => $value){
 			echo '<tr>';
 			$alternating_row_class = ++$i%2 == 0 ? 'alternating_row_class_1' : 'alternating_row_class_2';
 			echo "<td class='alternating_rows $alternating_row_class'>$key</td>";
-			echo "<td class='alternating_rows $alternating_row_class'>$value</td>";
+			echo "<td class='alternating_rows $alternating_row_class'>" . ucfirst($value) . "</td>";
 			echo '</tr>';
 		}
 		echo '</table>';
-		
+
 		try {
 			
-			$soap_response = $soap_client->$operation($parameters);
+			$soap_response = $soap_client->$operation($params);
 			
 		} catch (\SoapFault $exception) {
 
