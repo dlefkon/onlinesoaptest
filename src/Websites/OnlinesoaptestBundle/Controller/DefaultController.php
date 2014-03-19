@@ -148,6 +148,11 @@ exit;
     	echo $soap_client->getLastResponse();
     }
     
-    
+    public function thumbnailsAction( $title ) {
+
+    	return $this->render('OnlinesoaptestBundle:Default:thumbnails.html.twig', array( 'title' => $title ));
+    	
+    	
+    }
     
 }

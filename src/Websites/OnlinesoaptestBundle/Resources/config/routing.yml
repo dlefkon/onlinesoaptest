@@ -8,7 +8,11 @@ onlinesoaptest_ajax_page:
     
 onlinesoaptest_photos_page:
     pattern: '/photos/{name}'
-    defaults: { _controller: OnlinesoaptestBundle:default:photos, 'title' : 'onlinesoaptest' }
+    defaults: { _controller: OnlinesoaptestBundle:default:photos, 'title' : 'onlinesoaptest:photo' }
+    
+onlinesoaptest_thumbnails_page:
+    pattern: '/photos'
+    defaults: { _controller: OnlinesoaptestBundle:default:thumbnails, 'title' : 'onlinesoaptest:photos' }
     
 onlinesoaptest_about_page:
     pattern: '/about'
