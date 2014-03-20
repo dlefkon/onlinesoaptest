@@ -1,9 +1,0 @@
-table.response {
-	background-color:white;
-	margin: 0 auto;
-}
-
-table.response tbody tr td {
-	border: 1px solid #444;
-	padding:5px;
-}

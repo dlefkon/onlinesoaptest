@@ -1,9 +1,5 @@
 {% extends 'OnlinesoaptestBundle::layout.html.twig' %}
 
-{% block body %}
-
-		{{ parent() }}
-				
 			{% block content %} 
 			
 				{% if 'supersoap' == app.request.get('name')  %}
@@ -14,13 +10,10 @@
 					
 				{% endif %}
 				
-			{% endblock content %}
-			
 			<script>
 	
 				$(".image_link").click( function() {
 	
-					console.log($(this).prop('id'));
 					console.log($(this).prop('id'));
 					
 					switch( $(this).prop('id') ) {
@@ -35,6 +28,4 @@
 			
 			</script>
 		
-</body> 
-
-{% endblock body %}
+			{% endblock content %}
