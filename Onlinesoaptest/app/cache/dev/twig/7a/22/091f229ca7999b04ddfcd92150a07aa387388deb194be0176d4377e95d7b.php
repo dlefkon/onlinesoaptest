@@ -192,7 +192,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t";
         // line 142
         $this->displayBlock('footer', $context, $blocks);
-        // line 252
+        // line 244
         echo "
 ";
     }
@@ -207,7 +207,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t
 \t\t\t<!--start: Container -->
 \t\t\t<div class=\"container\">
-\t\t\t\t
+
 \t\t\t\t<!--start: Navigation -->
 \t\t\t\t<div class=\"navbar navbar-inverse\">
 \t\t    \t\t<div class=\"navbar-inner\">
@@ -328,7 +328,13 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t\t<!-- end: Footer Menu Links-->
-\t
+\t\t<div class=\"span4\">
+\t\t\t\t
+\t\t\t\t";
+        // line 185
+        $this->env->loadTemplate("OnlinesoaptestBundle::share.html.twig")->display($context);
+        // line 186
+        echo "\t\t</div>\t
 \t\t\t\t\t<!-- start: Footer Menu Back To Top -->
 \t\t\t\t\t<div class=\"span1\">
 \t\t\t\t\t\t\t
@@ -357,7 +363,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t<div class=\"sixteen columns\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\t&copy; ";
-        // line 211
+        // line 214
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "   <a href=\"http://onlinesoaptest.com\">OnlineSoapTest</a> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/images/poland.png"), "html", null, true);
@@ -372,17 +378,17 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t<!-- end: Copyright -->
 \t
 \t\t";
-        // line 221
+        // line 224
         $this->displayBlock('js', $context, $blocks);
-        // line 250
+        // line 242
         echo "\t
 \t";
     }
 
-    // line 221
+    // line 224
     public function block_js($context, array $blocks = array())
     {
-        // line 222
+        // line 225
         echo "\t\t
 \t\t    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 \t\t    <!--[if lt IE 9]>
@@ -395,23 +401,10 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t
 \t\t\t\t});
 \t\t\t
-\t\t\t   ";
-        // line 234
-        if (("live" == $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "environment"))) {
-            // line 235
-            echo "\t\t\t
-\t\t\t\t  var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");
-\t\t\t\t  document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));
-\t\t\t\t
-\t\t\t\t  try {
-\t\t\t\t  var pageTracker = _gat._getTracker(\"UA-7908690-31\");
-\t\t\t\t  pageTracker._trackPageview();
-\t\t\t\t  }
-\t\t\t\t  catch(err) {}
-\t\t\t
-\t\t\t   ";
-        }
-        // line 246
+\t\t\t\t";
+        // line 237
+        $this->env->loadTemplate("OnlinesoaptestBundle::analytics.html.twig")->display($context);
+        // line 238
         echo "\t\t\t
 \t\t\t</script>
 \t\t\t
@@ -430,6 +423,6 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 
     public function getDebugInfo()
     {
-        return array (  415 => 246,  402 => 235,  400 => 234,  386 => 222,  383 => 221,  378 => 250,  376 => 221,  361 => 211,  298 => 150,  290 => 143,  287 => 142,  281 => 131,  261 => 87,  255 => 86,  230 => 66,  224 => 65,  204 => 47,  201 => 46,  196 => 252,  194 => 142,  182 => 132,  180 => 131,  173 => 126,  163 => 122,  159 => 120,  155 => 119,  152 => 118,  142 => 114,  138 => 112,  134 => 111,  122 => 101,  120 => 46,  115 => 44,  112 => 43,  109 => 42,  103 => 23,  99 => 22,  95 => 21,  91 => 20,  86 => 19,  83 => 18,  74 => 36,  68 => 33,  61 => 29,  55 => 25,  53 => 18,  37 => 4,  34 => 3,);
+        return array (  408 => 238,  406 => 237,  392 => 225,  389 => 224,  384 => 242,  382 => 224,  367 => 214,  337 => 186,  335 => 185,  298 => 150,  290 => 143,  287 => 142,  281 => 131,  261 => 87,  255 => 86,  230 => 66,  224 => 65,  204 => 47,  201 => 46,  196 => 244,  194 => 142,  182 => 132,  180 => 131,  173 => 126,  163 => 122,  159 => 120,  155 => 119,  152 => 118,  142 => 114,  138 => 112,  134 => 111,  122 => 101,  120 => 46,  115 => 44,  112 => 43,  109 => 42,  103 => 23,  99 => 22,  95 => 21,  91 => 20,  86 => 19,  83 => 18,  74 => 36,  68 => 33,  61 => 29,  55 => 25,  53 => 18,  37 => 4,  34 => 3,);
     }
 }

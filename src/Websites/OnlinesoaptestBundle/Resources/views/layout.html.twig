@@ -50,7 +50,7 @@
 			
 			<!--start: Container -->
 			<div class="container">
-				
+
 				<!--start: Navigation -->
 				<div class="navbar navbar-inverse">
 		    		<div class="navbar-inner">
@@ -180,7 +180,10 @@
 						
 					</div>
 					<!-- end: Footer Menu Links-->
-	
+		<div class="span4">
+				
+				{% include "OnlinesoaptestBundle::share.html.twig" %}
+		</div>	
 					<!-- start: Footer Menu Back To Top -->
 					<div class="span1">
 							
@@ -231,18 +234,7 @@
 		
 				});
 			
-			   {% if 'live' == app.environment %}
-			
-				  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-				  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-				
-				  try {
-				  var pageTracker = _gat._getTracker("UA-7908690-31");
-				  pageTracker._trackPageview();
-				  }
-				  catch(err) {}
-			
-			   {% endif %}
+				{% include 'OnlinesoaptestBundle::analytics.html.twig' %}
 			
 			</script>
 			

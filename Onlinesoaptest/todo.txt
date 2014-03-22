@@ -1,4 +1,6 @@
-scroll/focus down after submit
+add rest of photos
+add favicon
 get demo working
 fix composer update on live
 go live
+check/fix analytics
