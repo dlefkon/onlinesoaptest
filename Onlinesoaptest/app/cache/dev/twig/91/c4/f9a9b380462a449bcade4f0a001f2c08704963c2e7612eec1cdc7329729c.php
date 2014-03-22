@@ -41,7 +41,6 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t<td style=\"text-align:right;\"><label for=\"demo\" style=\"margin-right:10px;\">Demo:</label></td>
 \t\t\t\t\t<td><input id=\"demo\" name=\"demo\" type=\"checkbox\" class=\"big_checkbox\"/></td>
 \t\t\t\t\t
-\t\t\t\t\t
 \t\t\t\t</tr>
 \t\t\t
 \t\t\t\t<tr>
@@ -53,19 +52,13 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t\t<button id=\"view\">View</button>
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
-\t\t\t\t
-\t\t\t
-\t\t\t
-\t\t\t
+
 \t\t\t\t<tr>
 \t\t\t\t\t<td><label for=\"endpoint\">Endpoint:</label>
 \t\t\t\t\t</td>
 \t\t\t\t\t<td><input id=\"endpoint\" name=\"endpoint\" type=\"text\" size=\"50\" />
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
-\t\t\t\t
-\t\t\t
-\t\t\t
 \t\t\t
 \t\t\t\t<tr>
 \t\t\t\t\t<td><label for=\"operation\">Operation:</label>
@@ -74,7 +67,6 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
 \t\t\t\t
-\t\t\t
 \t\t\t\t<tr id='parameters'>
 \t\t\t\t    <td><label class=\"ap\">Add Parameter</label></td>
 \t\t\t\t    
@@ -127,11 +119,11 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t</td>
 \t\t\t\t\t<td><select id=\"version\" name=\"version\"/>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 101
+        // line 93
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_1"]) ? $context["SOAP_1_1"] : $this->getContext($context, "SOAP_1_1")), "html", null, true);
         echo "\">SOAP_1_1</option>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 102
+        // line 94
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
         echo "\" selected=\"selected\">SOAP_1_2</option>
 \t\t\t\t\t\t</select>
@@ -147,11 +139,11 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t</td>
 \t\t\t\t\t<td><select id=\"style\" name=\"style\"/>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 115
+        // line 107
         echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
         echo "\" selected=\"selected\">SOAP_RPC</option>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 116
+        // line 108
         echo twig_escape_filter($this->env, (isset($context["SOAP_DOCUMENT"]) ? $context["SOAP_DOCUMENT"] : $this->getContext($context, "SOAP_DOCUMENT")), "html", null, true);
         echo "\">SOAP_DOCUMENT</option>
 \t\t\t\t\t\t</select>
@@ -168,11 +160,11 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 \t\t\t\t\t<td>
 \t\t\t\t\t\t<select id=\"encoding\" name=\"encoding\"/>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 130
+        // line 122
         echo twig_escape_filter($this->env, (isset($context["SOAP_ENCODED"]) ? $context["SOAP_ENCODED"] : $this->getContext($context, "SOAP_ENCODED")), "html", null, true);
         echo "\">SOAP_ENCODED</option>
 \t\t\t\t\t\t\t<option value=\"";
-        // line 131
+        // line 123
         echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
         echo "\" selected=\"selected\">SOAP_LITERAL</option>
 \t\t\t\t\t\t</select>
@@ -200,62 +192,62 @@ class __TwigTemplate_91c4f9a9b380462a449bcade4f0a001f2c08704963c2e7612eec1cdc732
 ";
     }
 
-    // line 157
+    // line 149
     public function block_js($context, array $blocks = array())
     {
-        // line 158
+        // line 150
         echo "
 ";
-        // line 159
+        // line 151
         $this->displayParentBlock("js", $context, $blocks);
         echo "
 \t\t\t
 <!-- start: Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"";
-        // line 163
+        // line 155
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery_validate.js"), "html", null, true);
         echo "\"></script>
 <!-- removed isotope.js as calling deprecated 'browser' function .. back down jquery or up version of this js -->
 <script src=\"";
-        // line 165
+        // line 157
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.imagesloaded.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 166
+        // line 158
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 167
+        // line 159
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/flexslider.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 168
+        // line 160
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/carousel.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 169
+        // line 161
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/jquery.cslider.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 170
+        // line 162
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/slider.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 171
+        // line 163
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/fancybox.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 172
+        // line 164
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/twitter.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 173
+        // line 165
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/modernizr.js"), "html", null, true);
         echo "\"></script>
 <!-- removed custom.js due to missing isotope.js -->
 <script src=\"";
-        // line 175
+        // line 167
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/Onlinesoaptest/js/app.js"), "html", null, true);
         echo "\"></script>
     
@@ -350,19 +342,19 @@ var new_row = '';
 \t\t\t
 \t\t\tversion = \$('#version').val();
 \t\t\t\$('#version').val(";
-        // line 267
+        // line 259
         echo twig_escape_filter($this->env, (isset($context["SOAP_1_2"]) ? $context["SOAP_1_2"] : $this->getContext($context, "SOAP_1_2")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tstyle = \$('#style').val();
 \t\t\t\$('#style').val( ";
-        // line 270
+        // line 262
         echo twig_escape_filter($this->env, (isset($context["SOAP_RPC"]) ? $context["SOAP_RPC"] : $this->getContext($context, "SOAP_RPC")), "html", null, true);
         echo ");
 \t\t\t
 \t\t\tencoding = \$('#encoding').val();
 \t\t\t\$('#encoding').val(";
-        // line 273
+        // line 265
         echo twig_escape_filter($this->env, (isset($context["SOAP_LITERAL"]) ? $context["SOAP_LITERAL"] : $this->getContext($context, "SOAP_LITERAL")), "html", null, true);
         echo ");
 \t\t\t
@@ -417,7 +409,12 @@ var new_row = '';
 \t\t\t\t},\t
 \t\t\t\turl : ajax_url,
 \t\t\t\tsuccess : function(response) {
-\t\t\t\t\t\$('#response').html(response).show();
+\t\t\t\t\t\$('#response').html(response).show(); //focus() scrollTo()
+\t\t\t\t\t
+\t\t\t\t\t    \$('html, body').animate({
+\t\t\t\t\t        scrollTop: \$(\"#response\").offset().top
+\t\t\t\t\t    }, 1000 );
+
 \t\t\t\t}
 \t\t    });
 \t\t    
@@ -445,6 +442,6 @@ var new_row = '';
 
     public function getDebugInfo()
     {
-        return array (  366 => 273,  360 => 270,  354 => 267,  259 => 175,  254 => 173,  250 => 172,  246 => 171,  242 => 170,  238 => 169,  234 => 168,  230 => 167,  226 => 166,  222 => 165,  217 => 163,  210 => 159,  207 => 158,  204 => 157,  176 => 131,  172 => 130,  155 => 116,  151 => 115,  135 => 102,  131 => 101,  29 => 3,);
+        return array (  358 => 265,  352 => 262,  346 => 259,  251 => 167,  246 => 165,  242 => 164,  238 => 163,  234 => 162,  230 => 161,  226 => 160,  222 => 159,  218 => 158,  214 => 157,  209 => 155,  202 => 151,  199 => 150,  196 => 149,  168 => 123,  164 => 122,  147 => 108,  143 => 107,  127 => 94,  123 => 93,  29 => 3,);
     }
 }

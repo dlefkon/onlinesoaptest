@@ -13,7 +13,6 @@
 					<td style="text-align:right;"><label for="demo" style="margin-right:10px;">Demo:</label></td>
 					<td><input id="demo" name="demo" type="checkbox" class="big_checkbox"/></td>
 					
-					
 				</tr>
 			
 				<tr>
@@ -25,19 +24,13 @@
 						<button id="view">View</button>
 					</td>
 				</tr>
-				
-			
-			
-			
+
 				<tr>
 					<td><label for="endpoint">Endpoint:</label>
 					</td>
 					<td><input id="endpoint" name="endpoint" type="text" size="50" />
 					</td>
 				</tr>
-				
-			
-			
 			
 				<tr>
 					<td><label for="operation">Operation:</label>
@@ -46,7 +39,6 @@
 					</td>
 				</tr>
 				
-			
 				<tr id='parameters'>
 				    <td><label class="ap">Add Parameter</label></td>
 				    
@@ -323,7 +315,12 @@ $(document).ready(function() {
 				},	
 				url : ajax_url,
 				success : function(response) {
-					$('#response').html(response).show();
+					$('#response').html(response).show(); //focus() scrollTo()
+					
+					    $('html, body').animate({
+					        scrollTop: $("#response").offset().top
+					    }, 1000 );
+
 				}
 		    });
 		    
