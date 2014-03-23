@@ -12,7 +12,7 @@ onlinesoaptest_photos_page:
     
 onlinesoaptest_thumbnails_page:
     pattern: '/photos'
-    defaults: { _controller: OnlinesoaptestBundle:default:thumbnails, 'title' : 'onlinesoaptest:photos' }
+    defaults: { _controller: OnlinesoaptestBundle:default:thumbnails, 'title' : 'onlinesoaptest:photos'}
     
 onlinesoaptest_about_page:
     pattern: '/about'

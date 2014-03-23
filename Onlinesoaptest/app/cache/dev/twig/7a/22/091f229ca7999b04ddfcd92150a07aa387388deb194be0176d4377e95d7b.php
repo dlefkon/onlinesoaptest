@@ -300,7 +300,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t
 \t
 \t\t\t\t\t<!-- start: Footer Menu Logo -->
-\t\t\t\t\t<div class=\"span2\">
+\t\t\t\t\t<div class=\"span3\">
 \t\t\t\t\t\t<div id=\"footer-menu-logo\">
 \t\t\t\t\t\t\t<a class=\"brand\" href=\"#\">Online<span>Soap</span>Test</a>
 \t\t\t\t\t\t</div>
@@ -308,7 +308,7 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t<!-- end: Footer Menu Logo -->
 \t
 \t\t\t\t\t<!-- start: Footer Menu Links-->
-\t\t\t\t\t<div class=\"span9\">
+\t\t\t\t\t<div class=\"span4\">
 \t\t\t\t\t\t
 \t\t\t\t\t\t<div id=\"footer-menu-links\">
 \t
@@ -328,13 +328,13 @@ class __TwigTemplate_7a22091f229ca7999b04ddfcd92150a07aa387388deb194be0176d4377e
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t\t<!-- end: Footer Menu Links-->
-\t\t<div class=\"span4\">
+\t\t\t\t\t<div class=\"span5\">
 \t\t\t\t
-\t\t\t\t";
+\t\t\t\t\t\t\t";
         // line 185
         $this->env->loadTemplate("OnlinesoaptestBundle::share.html.twig")->display($context);
         // line 186
-        echo "\t\t</div>\t
+        echo "\t\t\t\t\t</div>\t
 \t\t\t\t\t<!-- start: Footer Menu Back To Top -->
 \t\t\t\t\t<div class=\"span1\">
 \t\t\t\t\t\t\t

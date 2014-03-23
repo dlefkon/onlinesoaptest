@@ -2,10 +2,37 @@
 
 			{% block content %} 
 			
+	<style type="text/css">
+	
+		img { 
+		
+			width:auto;
+			
+		}
+		
+	</style>
 				{% if 'supersoap' == app.request.get('name')  %}
 			
 					<a href="{{ app.request.get('href_url') }}" target="_blank">
 						<img alt="A photo of {{ app.request.get('name') }}" src="/bundles/onlinesoaptest/images/soap/supersoap.jpg">
+					</a>
+					
+				{% elseif 'structure' == app.request.get('name')  %}
+			
+					<a href="{{ app.request.get('href_url') }}" target="_blank">
+						<img alt="A photo of {{ app.request.get('name') }}" src="/bundles/onlinesoaptest/images/soap/structure.gif">
+					</a>
+					
+				{% elseif 'flow' == app.request.get('name')  %}
+			
+					<a href="{{ app.request.get('href_url') }}" target="_blank">
+						<img alt="A photo of {{ app.request.get('name') }}" src="/bundles/onlinesoaptest/images/soap/flow.gif">
+					</a>
+				
+				{% elseif 'layers' == app.request.get('name')  %}
+			
+					<a href="{{ app.request.get('href_url') }}" target="_blank">
+						<img alt="A photo of {{ app.request.get('name') }}" src="/bundles/onlinesoaptest/images/soap/layers.gif">
 					</a>
 					
 				{% endif %}
