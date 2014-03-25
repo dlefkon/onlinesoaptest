@@ -19,7 +19,6 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "johnpbloch/wordpress-core-installer": "dev-master",
         "burti/zend-soap": "dev-master"
     },
     "scripts": {
