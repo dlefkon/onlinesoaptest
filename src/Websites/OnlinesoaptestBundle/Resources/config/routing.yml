@@ -1,31 +1,31 @@
 onlinesoaptest_home_page:
     pattern: '/'
-    defaults: { _controller: OnlinesoaptestBundle:default:home, 'title' : 'onlinesoaptest' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:home, 'title' : 'onlinesoaptest' }
     
 onlinesoaptest_ajax_page:
     pattern: '/ajax'
-    defaults: { _controller: OnlinesoaptestBundle:default:ajax, 'title' : 'onlinesoaptest' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:ajax, 'title' : 'onlinesoaptest' }
     
 onlinesoaptest_photos_page:
     pattern: '/photos/{name}'
-    defaults: { _controller: OnlinesoaptestBundle:default:photos, 'title' : 'onlinesoaptest:photo' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:photos, 'title' : 'onlinesoaptest:photo' }
     
 onlinesoaptest_thumbnails_page:
     pattern: '/photos'
-    defaults: { _controller: OnlinesoaptestBundle:default:thumbnails, 'title' : 'onlinesoaptest:photos'}
+    Defaults: { _controller: OnlinesoaptestBundle:Default:thumbnails, 'title' : 'onlinesoaptest:photos'}
     
 onlinesoaptest_about_page:
     pattern: '/about'
-    defaults: { _controller: OnlinesoaptestBundle:default:about, 'title' : 'onlinesoaptest::about' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:about, 'title' : 'onlinesoaptest::about' }
     
 onlinesoaptest_blog_page:
     pattern: '/blog'
-    defaults: { _controller: OnlinesoaptestBundle:default:blog, 'title' : 'onlinesoaptest::blog' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:blog, 'title' : 'onlinesoaptest::blog' }
 
 onlinesoaptest_contact_page:
     pattern: '/contact'
-    defaults: { _controller: OnlinesoaptestBundle:default:contact, 'title' : 'onlinesoaptest::contact' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:contact, 'title' : 'onlinesoaptest::contact' }
 
 onlinesoaptest_sendemail_page:
     pattern: '/sendemail'
-    defaults: { _controller: OnlinesoaptestBundle:default:sendemail, 'title' : 'onlinesoaptest::Send Email' }
+    Defaults: { _controller: OnlinesoaptestBundle:Default:sendemail, 'title' : 'onlinesoaptest::Send Email' }
