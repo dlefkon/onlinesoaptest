@@ -1,6 +1,4 @@
-add rest of photos
-add favicon
 get demo working
-fix composer update on live
+fix composer update on live .. or remove vendor dir from .gitignore
 go live
-check/fix analytics
+check (and fix) analytics in a couple days
